@@ -38,9 +38,11 @@ jobs:
           hangul = re.compile(r'[\uac00-\ud7a3\u1100-\u11ff\u3130-\u318f\ua960-\ua97f\ud7b0-\ud7ff]')
           violations = []
           for root, dirs, files in os.walk('.'):
-              if '.git' in root or 'recursive language models.pdf' in root:
+              if '.git' in root or 'node_modules' in root:
                   continue
               for f in files:
+                  if f.endswith('.pdf') or f.endswith('.png') or f.endswith('.jpg') or f.endswith('.pyc'):
+                      continue
                   p = os.path.join(root, f)
                   try:
                       with open(p, 'r', encoding='utf-8', errors='ignore') as file:
