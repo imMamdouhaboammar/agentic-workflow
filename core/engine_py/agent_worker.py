@@ -10,7 +10,7 @@ Implements:
 
 import os
 import time
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 from core.engine_py.models import TaskInstance, AgentRole
 from core.engine_py.worker import BaseWorker
