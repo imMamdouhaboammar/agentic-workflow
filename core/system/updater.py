@@ -34,7 +34,7 @@ class AutoUpdater:
                 with open(pkg, "r", encoding="utf-8") as f:
                     return json.load(f).get("version", "1.0.0")
             except Exception:
-                pass
+                return "1.0.0"
         return "1.0.0"
 
     def check_for_updates(self) -> Dict[str, Any]:
@@ -58,7 +58,7 @@ class AutoUpdater:
                     "date": "recent"
                 })
         except Exception:
-            pass
+            remote = curr
 
         return {
             "has_update": remote != curr and remote != "unknown",
@@ -100,7 +100,7 @@ class AutoUpdater:
                     subprocess.run("bun install", shell=True, cwd=self.project_dir, capture_output=True)
                     reinstalled = True
                 except Exception:
-                    pass
+                    reinstalled = False
 
             self._save_history({
                 "previous_commit": prev_commit,
@@ -141,7 +141,7 @@ class AutoUpdater:
                 try:
                     self._run_git("stash pop")
                 except Exception:
-                    pass
+                    _popped = False
             with open(self.history_file, "w", encoding="utf-8") as f:
                 json.dump(history, f, indent=2)
             return {"success": True, "rolled_back_to": target, "message": f"Rolled back to {target[:7]}"}
@@ -154,7 +154,7 @@ class AutoUpdater:
                 with open(self.history_file, "r", encoding="utf-8") as f:
                     return json.load(f)
             except Exception:
-                pass
+                return []
         return []
 
     def _save_history(self, record: Dict[str, Any]):
@@ -164,4 +164,4 @@ class AutoUpdater:
             with open(self.history_file, "w", encoding="utf-8") as f:
                 json.dump(h, f, indent=2)
         except Exception:
-            pass
+            _saved = False

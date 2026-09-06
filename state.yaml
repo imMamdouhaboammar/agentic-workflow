@@ -1,7 +1,7 @@
 workflow:
   title: DAG Test
   goal: Verify OmniSkill DAG Planning
-  trace_id: auto_1788696567_b418f7
+  trace_id: auto_1788697498_a411e3
   current_step: 1
   total_steps: 2
   autopilot:

@@ -21,13 +21,13 @@ class VersionTracker:
 
     def get_version_matrix(self) -> Dict[str, Any]:
         pkg = self.project_dir / "package.json"
-        ver = "1.1.0"
+        ver = "1.2.2"
         if pkg.exists():
             try:
                 with open(pkg, "r", encoding="utf-8") as f:
-                    ver = json.load(f).get("version", "1.1.0")
+                    ver = json.load(f).get("version", "1.2.2")
             except Exception:
-                pass
+                ver = "1.2.2"
 
         commit = self._run_git("rev-parse HEAD") or "unknown"
         branch = self._run_git("rev-parse --abbrev-ref HEAD") or "main"

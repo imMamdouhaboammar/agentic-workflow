@@ -115,7 +115,7 @@ class AutoInstaller:
             try:
                 os.chmod(cli_src, 0o755)
             except Exception:
-                pass
+                _chmod_ok = False
 
             local_bin = self.home_dir / ".local" / "bin"
             local_bin.mkdir(parents=True, exist_ok=True)

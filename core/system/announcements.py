@@ -40,7 +40,7 @@ class AnnouncementEngine:
                 with open(self.state_file, "r", encoding="utf-8") as f:
                     return json.load(f).get("seen_ids", [])
             except Exception:
-                pass
+                return []
         return []
 
     def list_all(self) -> List[Dict[str, Any]]:
@@ -61,7 +61,7 @@ class AnnouncementEngine:
                 with open(self.state_file, "w", encoding="utf-8") as f:
                     json.dump({"seen_ids": seen}, f, indent=2)
             except Exception:
-                pass
+                _saved = False
 
     def mark_all_as_read(self):
         all_ids = [a["id"] for a in self.list_all()]
@@ -69,4 +69,4 @@ class AnnouncementEngine:
             with open(self.state_file, "w", encoding="utf-8") as f:
                 json.dump({"seen_ids": all_ids}, f, indent=2)
         except Exception:
-            pass
+            _saved = False

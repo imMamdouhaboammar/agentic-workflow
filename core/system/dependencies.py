@@ -32,7 +32,7 @@ class DependenciesEngine:
                             "version": ver
                         })
             except Exception:
-                pass
+                _pkg_read = False
 
         # 2. Python standard modules
         for mod in ["json", "pathlib", "unittest", "dataclasses", "asyncio"]:

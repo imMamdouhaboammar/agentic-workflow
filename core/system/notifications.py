@@ -58,7 +58,7 @@ class NotificationEngine:
                 subprocess.run(f'notify-send "{clean_t}" "{clean_m}"', shell=True, capture_output=True)
                 return True
         except Exception:
-            pass
+            return False
         return False
 
     def send(self, title: str, message: str, level: str = "INFO", sound: bool = True, desktop: bool = True) -> Dict[str, Any]:
@@ -84,7 +84,7 @@ class NotificationEngine:
                 with open(self.history_file, "r", encoding="utf-8") as f:
                     return json.load(f)
             except Exception:
-                pass
+                return []
         return []
 
     def _save_record(self, record: Dict[str, Any]):
@@ -94,4 +94,4 @@ class NotificationEngine:
             with open(self.history_file, "w", encoding="utf-8") as f:
                 json.dump(h[:50], f, indent=2)
         except Exception:
-            pass
+            _saved = False

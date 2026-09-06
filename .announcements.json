@@ -1,5 +1,13 @@
 [
   {
+    "id": "test_ann_1788697478460",
+    "title": "Dynamic Test Announcement",
+    "body": "Verified bulletin dispatch.",
+    "category": "FEATURE",
+    "date": "2026-09-06",
+    "priority": "high"
+  },
+  {
     "id": "test_ann_1788696947641",
     "title": "Dynamic Test Announcement",
     "body": "Verified bulletin dispatch.",

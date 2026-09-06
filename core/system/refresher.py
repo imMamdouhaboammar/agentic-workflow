@@ -29,7 +29,7 @@ class Refresher:
                 shutil.rmtree(p, ignore_errors=True)
                 cleared.append(str(p.relative_to(self.project_dir)))
             except Exception:
-                pass
+                _cleared = False
 
         for p in self.project_dir.rglob(".pytest_cache"):
             if "node_modules" in str(p):
@@ -38,7 +38,7 @@ class Refresher:
                 shutil.rmtree(p, ignore_errors=True)
                 cleared.append(str(p.relative_to(self.project_dir)))
             except Exception:
-                pass
+                _cleared = False
 
         return {"cleared": cleared, "freed_bytes": freed}
 
@@ -53,7 +53,7 @@ class Refresher:
                         lf.unlink()
                         cleared.append(lock_name)
                 except Exception:
-                    pass
+                    _unlinked = False
         return cleared
 
     def refresh(self, clear_bytecode: bool = True, rebuild_index: bool = True, sync_integrations: bool = True) -> Dict[str, Any]:

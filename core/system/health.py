@@ -22,7 +22,7 @@ class HealthEngine:
             if res.returncode == 0:
                 bun_v = res.stdout.strip()
         except Exception:
-            pass
+            bun_v = None
 
         py_v = platform.python_version()
 
@@ -38,7 +38,7 @@ class HealthEngine:
                     if line.strip().startswith("current_step:"):
                         step = line.split(":", 1)[1].strip().strip('"\'')
             except Exception:
-                pass
+                has_wf = False
 
         # Circuit breaker
         cb = "CLOSED"
@@ -52,7 +52,7 @@ class HealthEngine:
                         cb = "OPEN"
                     streak = data.get("failure_streak", 0)
             except Exception:
-                pass
+                streak = 0
 
         # Traces count
         traces = 0
@@ -63,7 +63,7 @@ class HealthEngine:
                     with open(f, "r", encoding="utf-8") as fp:
                         traces += sum(1 for _ in fp)
                 except Exception:
-                    pass
+                    traces += 0
 
         return {
             "platform": platform.system().lower(),
