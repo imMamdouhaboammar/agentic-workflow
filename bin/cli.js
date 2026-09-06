@@ -1047,7 +1047,7 @@ Usage:
 
   case '--version':
   case '-v': {
-    console.log("agentic-workflow v1.2.0");
+    console.log("agentic-workflow v1.2.1");
     break;
   }
 

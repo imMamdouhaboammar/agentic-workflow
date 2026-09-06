@@ -2,7 +2,7 @@
 AgenticWorkflow: Universal Autonomous Agentic Toolchain & Pluripotent Stem-Cell Framework
 """
 
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 __author__ = "Mamdouh Aboammar"
 
 from core.autopilot_engine import AutopilotEngine

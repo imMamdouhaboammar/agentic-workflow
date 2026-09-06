@@ -31,6 +31,7 @@ translations/*
 *.egg-info/
 dist/
 build/
+release-assets/
 *.backup.*
 
 # Node / Bun

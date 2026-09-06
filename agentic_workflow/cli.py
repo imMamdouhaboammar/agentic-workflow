@@ -19,7 +19,7 @@ def main():
         prog="agentic-workflow",
         description="⚡ AgenticWorkflow CLI — Universal Autonomous Agentic Toolchain ⚡"
     )
-    parser.add_argument("--version", "-v", action="version", version="agentic-workflow 1.2.0")
+    parser.add_argument("--version", "-v", action="version", version="agentic-workflow 1.2.1")
 
     subparsers = parser.add_subparsers(dest="command", help="Available subcommands")
 
