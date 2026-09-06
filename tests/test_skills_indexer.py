@@ -23,6 +23,17 @@ class TestSkillsIndexer(unittest.TestCase):
 
     def setUp(self):
         self.test_dir = tempfile.mkdtemp(prefix="agentic_skills_test_")
+        # Ensure a mock skill exists in self.test_dir so skills_mesh has hermetic skills available
+        skill_dir = os.path.join(self.test_dir, ".claude", "skills", "test-guard")
+        os.makedirs(skill_dir, exist_ok=True)
+        with open(os.path.join(skill_dir, "SKILL.md"), "w", encoding="utf-8") as f:
+            f.write("""---
+name: test-guard
+description: Automated test execution and clean code auditor
+tags: [guard, test, code]
+---
+# Test Guard
+""")
 
     def tearDown(self):
         shutil.rmtree(self.test_dir, ignore_errors=True)
