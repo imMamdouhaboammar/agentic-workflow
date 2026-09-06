@@ -83,9 +83,31 @@ When analyzing or optimizing workflows:
 
 ---
 
+## Autonomous Self-Fueling Engine & Circuit Breaker
+
+The system operates as an end-to-end autonomous engine with built-in energy management:
+1. **Self-Fueling & Energy Loop**: Dynamic token and context headroom monitoring with automatic RLM state compaction and refueling checkpoints before context exhaustion.
+2. **Fable Circuit Breaker**: State transitions `CLOSED` → `OPEN` → `HALF_OPEN`. Automatically halts speculative thrashing when consecutive failure streak $\ge 2$, isolates root causes via Abductive Diagnosis (`diagnose_context.py`), and executes structured recovery.
+3. **Clean Code Guard**: Automated AST guard pass checking the 24 Clean Code imperatives (small functions, intent-revealing names, maximum 4 parameters, no swallowed exceptions, no fake success mocks).
+4. **AI Engineering Evaluation**: Integrated four-fifths disparate impact testing ($\ge 0.80$), PSI distribution drift monitoring, and adversarial prompt-injection sanitization.
+
+---
+
 ## CLI & Toolchain Integration
 
 ```bash
+# Launch autonomous end-to-end autopilot workflow with self-fueling & energy management
+agentic-workflow autopilot --title "Production Pipeline" --goal "Autonomous Delivery"
+
+# Run Clean Code Guard audit pass (SOLID, 24 Imperatives, AI failure modes)
+agentic-workflow guard [directory]
+
+# Execute AI Engineer fairness, drift, and prompt-injection evaluation gates
+agentic-workflow eval
+
+# Query multi-agent observable trace logs and spans
+agentic-workflow traces
+
 # Initialize infrastructure, SOT runtime dirs, and health checks
 agentic-workflow init
 
@@ -95,7 +117,7 @@ agentic-workflow validate
 # Check live workflow dashboard and observability metrics
 agentic-workflow status
 
-# Run safety, security, and verification test suite
+# Run full automated test suite (safety, guard, MAS, evaluator)
 agentic-workflow test
 ```
 

@@ -27,6 +27,14 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Python Dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Run Clean Code Guard Audit
+        run: |
+          bun ./bin/cli.js guard core
+
       - name: Run Test Suite via CLI
         run: |
           bun ./bin/cli.js test

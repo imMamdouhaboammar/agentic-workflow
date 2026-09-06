@@ -14,6 +14,7 @@ autopilot-logs/
 pacs-logs/
 review-logs/
 diagnosis-logs/
+.traces/
 translations/*
 !translations/glossary.yaml
 

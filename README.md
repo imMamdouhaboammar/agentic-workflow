@@ -136,6 +136,18 @@ bun add -g agentic-workflow
 ### 3. CLI Commands
 
 ```bash
+# Launch autonomous end-to-end autopilot workflow with self-fueling & energy management
+agentic-workflow autopilot --title "Production Pipeline" --goal "Autonomous Delivery"
+
+# Run Clean Code Guard audit pass (SOLID, 24 Imperatives, AI failure modes)
+agentic-workflow guard [directory]
+
+# Execute AI Engineer fairness, drift, and prompt-injection evaluation gates
+agentic-workflow eval
+
+# Query multi-agent observable trace logs and spans
+agentic-workflow traces
+
 # Initialize infrastructure, SOT runtime directories, and health checks
 agentic-workflow init
 
@@ -145,7 +157,7 @@ agentic-workflow validate
 # Check current workflow progress and observability dashboard
 agentic-workflow status
 
-# Run internal test suite (43 safety tests + 88 security tests)
+# Run full automated test suite (safety, guard, MAS, evaluator)
 agentic-workflow test
 ```
 
