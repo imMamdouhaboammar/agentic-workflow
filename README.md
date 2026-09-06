@@ -126,7 +126,7 @@ curl -fsSL https://raw.githubusercontent.com/imMamdouhaboammar/agentic-workflow/
 | **Bun (Library)** | `bun add @mamdouh-aboammar/agentic-workflow` | TypeScript / Bun SDK dependency |
 | **npm / npx (Node)** | `npx @mamdouh-aboammar/agentic-workflow [command]` | Zero-install Node CLI execution |
 | **npm (Library)** | `npm install @mamdouh-aboammar/agentic-workflow` | Node.js ESM library dependency |
-| **PyPI (Python)** | `pip install agenticworkflow` | Python library & console script |
+| **PyPI (Python)** | `pip install agentic-workflow-toolchain` | Python library & console script |
 | **Homebrew (macOS/Linux)** | `brew install imMamdouhaboammar/tap/agentic-workflow` | System binary via Homebrew |
 | **Docker Container** | `docker run -it ghcr.io/immamdouhaboammar/agentic-workflow` | Isolated, containerized runner |
 
