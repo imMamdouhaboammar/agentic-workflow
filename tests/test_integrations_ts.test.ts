@@ -44,10 +44,14 @@ describe("TypeScript / Bun Integrations Subsystem", () => {
     const tempHome = fs.mkdtempSync(path.join(os.tmpdir(), "installer-test-ts-"));
     try {
       const skillsDir = path.join(tempHome, ".gemini", "config", "skills");
-      for (const sname of ["ponytail", "caveman", "omni-skill"]) {
-        const sDir = path.join(skillsDir, sname);
-        fs.mkdirSync(sDir, { recursive: true });
-        fs.writeFileSync(path.join(sDir, "SKILL.md"), `# ${sname}`);
+      const reg = getDefaultRegistry(projectDir);
+      for (const item of reg.listAll()) {
+        const skillNames = item.install?.skill_names || [item.id];
+        for (const sname of skillNames) {
+          const sDir = path.join(skillsDir, sname);
+          fs.mkdirSync(sDir, { recursive: true });
+          fs.writeFileSync(path.join(sDir, "SKILL.md"), `# ${sname}`);
+        }
       }
 
       const installer = new IntegrationInstaller(projectDir, tempHome);
