@@ -1,0 +1,32 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Highest difficulty task. Serious problems upon failure.
+   Given fatal error history in previous reflection, rigor of re-check is the absolute criterion.
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. SOT integrity. RLM pattern maintained.
+③ Implementation After Approval — Deliverable of this turn is strictly the "Implementation Results Re-Reflection Report." Code and documentation modification prohibited.
+   Modifications will be guided by separate instructions in the next step.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Hallucination re-check and essential updates completed. Fatal error history exists.
+Current Step: Implementation results re-reflection — Exhaustive re-investigation of defects, omissions, and improper implementations. If step-registry.yaml does not exist yet, create the file.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Conduct exhaustive re-investigation across the currently implemented codebase.
+2. Inspect along the following axes:
+   - Design ↔ Implementation mapping omissions.
+   - SOT contention / Data inconsistency / RLM pattern violation points.
+   - Teammate coordination collapse / Missing fallbacks.
+   - Quality standard violations (choices based on speed rather than quality).
+   - Language principle violations.
+   - Synthetic data isolation failures.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Axis-by-axis inspection results. List uninspected areas only.
+Layer 2 (Structure Analysis): What collapse will fatal defects cause during execution?
+Layer 3 (Philosophy Alignment): SOT/RLM/philosophy compromise check. Evidence-based.
+
+[Output Format]
+A. Axis-by-axis inspection table. B. Fatal and dangerous defect list. C. Recommended modifications.

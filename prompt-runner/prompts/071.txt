@@ -1,0 +1,70 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Speed and token cost are completely ignored. "Quality and qualitative level" of the final deliverable is the absolute criterion.
+   Securing well-organized evaluation criteria (code-convention / ADR / code-quality-guide) is part of quality.
+
+② SOT Invariant — Source of Truth structure and the philosophy, purpose, and core of the existing workflow
+   cannot be compromised by any improvement. If potential compromise is seen, report before proposing designs.
+
+③ Local Execution Invariant — All components assume automatic execution on the user's local computer.
+
+④ Implementation After Approval — Output of this turn is strictly the "Infrastructure Build Design Proposal."
+   Actual code implementation and file creation are prohibited. Finalize design through dialogue.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria among ①②③ take absolute precedence. If ② is shaken, halt and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Multi-round reflections and updates on /prompt/workflow.md completed.
+Current Step: Infrastructure Build (Execution Foundation Setup) design proposal → Finalize through dialogue.
+              (Implementation executed only after approval.)
+Key Reference Files:
+  - /prompt/workflow.md
+  - /prompt/distill-partner.md
+  - /prompt/crystalize-prompt.md
+External References (Mandatory Review):
+  - https://code.claude.com/docs/en/agent-teams
+  - https://www.anthropic.com/engineering/building-c-compiler
+  - https://github.com/ykdojo/claude-code-tips
+  - https://gist.github.com/kieranklaassen/4f2aba89594a4aea4ad64d753984b2ea
+  - https://www.datacamp.com/tutorial/claude-code-hooks
+[/SESSION HEADER]
+
+[Task Instructions — Designing Architecture]
+Combine Claude Code's Task Management System, fork, agent-teams, Agent Swarm,
+orchestrator agent, subagents, skills, hooks, commands, and task verification appropriately
+to implement the workflow in /prompt/workflow.md.
+
+Requirements:
+1) If necessary, skill-creator, subagent-creator, and fork manager can be custom-built.
+2) Standard equip Task Management System / agent-teams / Agent Swarm / fork.
+3) Appropriately combine orchestrator agent + subagents + skills + hooks + commands + task verification + fork to implement workflow.
+4) Judge usage of fork feature autonomously.
+5) All explanations, creation, and operation of agents / subagents / skills / hooks / commands / task verification must use **English**.
+6) Teammate composition is decided autonomously by analyzing workflow.
+7) Design mandatory fallback paths for swarmTeam failure / teammate unresponsiveness / team coordination collapse.
+
+[Absolute Criteria]
+- Quality and qualitative level is the absolute criterion (completely ignore speed and tokens).
+- Orchestrator agent oversees all subagents.
+- SOT (Source of Truth) is mandatory.
+- TDD test verification is mandatory for each feature. Enhance maturity via TDD automation.
+
+[Well-Organized Evaluation Criteria — Mandatory during code implementation phase]
+- code-convention.md (constant reference guide)
+- architectural-decision-records.md (architectural technical decision log)
+- code-quality-guide.md
+
+[Design Quality Verification — Self-Check Before Reporting]
+Layer 1 (Fact Check): Do requirements 1~7 + 4 absolute criteria + 3 evaluation criteria all map into the design?
+                      List omissions only.
+Layer 2 (Structure Analysis): Where will this design collapse first when actual implementation begins?
+                             (e.g., SOT collision, teammate coordination breakdown scenario, missing fallback path)
+Layer 3 (Philosophy Alignment): Are the philosophy, purpose, and core of the existing workflow preserved?
+                                Are there points where SOT pattern is compromised? Evidence-based.
+
+[Output Format — Design Proposal]
+A. Overall architecture overview (Roles of orchestrator / subagents / skills / hooks / commands / fork).
+B. Teammate composition plan.
+C. SOT · TDD · fallback · English operation design.
+D. Roles and authoring timelines for 3 evaluation criteria files.

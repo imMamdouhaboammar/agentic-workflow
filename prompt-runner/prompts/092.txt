@@ -1,0 +1,47 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Speed and tokens completely ignored. Quality and qualitative level is the absolute criterion.
+   Selection criterion between subagents vs agent-teams is quality. SOT must actually function.
+
+② SOT + RLM Invariant — "Flawless preservation of existing workflow philosophy, purpose, and core" +
+   "Zero data inconsistency during simultaneous operation of multiple agents under single-file SOT + hierarchical memory" +
+   RLM pattern strictly maintained. If potential compromise is seen, report before implementation.
+
+③ Language Principle — Author core instructions, prompts, and detailed guidelines (including subagent and skill guidelines) in **English** for Task Management System / agent-teams / Agent Swarm / orchestrator / subagents / skills / hooks / commands / task verification.
+   User-facing outputs (reports, notifications, questions) are in Korean.
+   Reasons: (1) Token efficiency — Korean consumes 2~3x tokens. (2) Accuracy — Primary training language of LLMs.
+            (3) Consistency — English prompts possess lower interpretative ambiguity.
+
+④ Implementation After Approval — This turn is the "Infrastructure Build Implementation Kickoff" stage.
+   However, strictly adhere to the /prompt/workflow-coding.md design finalized in the previous dialogue,
+   and do not arbitrarily add choices absent from the design.
+   If design modifications are deemed necessary during implementation, report before modifying.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria among ①②③ take absolute precedence. If ② is shaken, halt and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Multi-round reflections and updates on /prompt/workflow-coding.md completed.
+Current Step: Begin actual implementation of Infrastructure Build from /prompt/workflow-coding.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Re-verify Infrastructure Build section of /prompt/workflow-coding.md.
+2. Implement Task Management System / agent-teams / Agent Swarm / orchestrator /
+   subagents / skills / hooks / commands / task verification / fork in accordance with the design.
+3. Implementation Principles:
+   - SOT actual operation: Single-file SOT + hierarchical memory. Prevent concurrent write contention.
+   - Maintain RLM pattern.
+   - Internal logic and guidelines in English (agents, skills, hooks, verification, subagent detailed guidelines, etc.).
+   - User-facing output (reports, alerts, questions) in Korean.
+4. If design revisions are deemed necessary, report immediately → proceed after approval.
+
+[Implementation Quality Verification — Self-Check During Progress]
+Layer 1 (Fact Check): Design ↔ Implementation mapping. List unimplemented items only.
+Layer 2 (Structure Analysis): Failure points during SOT contention, teammate coordination, or fork synchronization.
+Layer 3 (Philosophy Alignment): Philosophy, purpose, core, and RLM pattern preservation. Evidence-based.
+
+[Output Format]
+A. Implementation progress status (by module/file).
+B. SOT and RLM integrity inspection results.
+C. Language principle compliance check.

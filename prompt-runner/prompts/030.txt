@@ -1,0 +1,52 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of PRD is single: "what to build."
+   Do not mix technology, implementation, and procedural details into the PRD body. That is the role of final-research.md.
+
+② Local Execution Invariant — Describe all requirements in the PRD draft under the premise of "automatic execution on the user's local computer."
+   Failure if SaaS or cloud-dependent premises are mixed in.
+
+③ Core Objective 1 Anchored — Fix "Core Objective 1" below as the absolute goal across all sections and all requirements of the PRD.
+   Do not include items in the PRD that are unrelated to Objective 1.
+
+④ Final Output After Approval — The deliverable of this turn is strictly a single draft /prompt/prd.md.
+   Drafting workflow.md is prohibited. The PRD is a "draft", and subsequent reflection and revision will continue.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria among ①②③ take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Final updates to /prompt/prd-research/final-research.md completed.
+Current Step: Draft prd.md using final-research.md as input data → /prompt/prd.md.
+Key Reference Files: /prompt/prd-research/final-research.md (back-data)
+[/SESSION HEADER]
+
+[User Objective & Intent]
+1) Writing PRD.md for an AI agentic workflow automation system that automatically implements Test Title on the user's local computer.
+2) The user has zero code implementation skills. Claude Code automatically implements everything flawlessly from start to finish.
+
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+
+[Task Instructions]
+1. Draft prd.md using teammates with final-research.md as back-data.
+2. PRD Scope Principles:
+   - What to include: "What to build" — product identity, user problems, requirements, success criteria, constraints.
+   - What NOT to include: concrete stack selection, implementation procedures, code design, backend architecture details.
+     (These are addressed in the workflow.md stage.)
+3. Explicitly state the connection of each requirement to Core Objective 1 in one line.
+   Exclude items from the PRD that do not connect to Objective 1.
+4. Implicitly assume local execution premise across all requirements. If exceptions exist, state explicitly in the 'Constraints' section.
+5. Save location: /prompt/prd.md
+
+[Draft Quality Verification — Self-Check Before Output]
+Layer 1 (Fact Check): Core Objective 1 ↔ Requirements mapping table. List only disconnected items.
+Layer 2 (Structure Analysis): When moving into workflow.md creation with this PRD, where will it shake first?
+                             (e.g., requirement ambiguity, absent success criteria, missing constraints)
+Layer 3 (Reverse Audit): What items not covered by this PRD are necessary to achieve Objective 1?
+                         An inspection to find what is absent.
+
+[Output Format — Deliverables for This Turn]
+A. Table of contents and section summaries for draft /prompt/prd.md.
+B. Core Objective 1 ↔ Requirements mapping.
+C. List of excluded items (and why they were excluded).

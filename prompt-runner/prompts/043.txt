@@ -1,0 +1,51 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — This turn is an "Idea Meeting." Exploration of possibilities, not confirmed design.
+   Definitive assertions prohibited. Preserve options, rationales, and trade-offs.
+
+② Local Execution Invariant — All ideas assume automatic execution on the user's local computer.
+   SaaS or remote dependency ideas must be tagged BLOCKED with supporting rationale.
+
+③ Core Objective 1 Anchored — Anchor Core Objective 1 below as the absolute goal for evaluating all ideas.
+   "Never forget Objective 1 even during conversation."
+
+④ Final Output After Approval — The output of this turn is strictly the "Idea Meeting Results Report."
+   workflow.md is not created yet. We are holding an idea meeting on how best to build it.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: /prompt/prd.md completed (draft).
+Current Step: 'Idea Meeting' for workflow.md creation. Utilize teammates.
+Key Reference Files: /prompt/prd.md
+[/SESSION HEADER]
+
+[User Premise]
+The user has zero code implementation skills. Claude Code understands user intent and
+automatically implements everything flawlessly from start to finish on the local computer.
+
+[★ Core Objective 1]
+Test Goal
+
+[Reading Protocol — 4 Stages]
+Stage 1: Focus on essence (What/Why). Grasp purpose, philosophy, and direction.
+Stage 2: Associative expansion. Requirements, stages, features, implementation ideas.
+Stage 3: Precision reinforcement of intermediate sections.
+Stage 4: [Reverse Audit] List things not covered in prd.md that are needed for workflow design.
+
+[Task Instructions]
+1. Grasp /prompt/prd.md via 4-stage reading.
+2. Conduct an idea meeting utilizing teammates — multi-angle proposals on "how best to build workflow.md for automated local computer implementation."
+3. Explicitly state the connection to Core Objective 1 for each idea. Exclude if disconnected.
+4. Report meeting results. Drafting workflow.md body is prohibited. Saving workflow-idea will occur in the next turn.
+
+[Meeting Quality Verification — 3 Layers]
+Layer 1 (Fact Check): prd.md requirements ↔ Meeting ideas mapping. List disconnected ideas only.
+Layer 2 (Structure Analysis): Where will these ideas break down first when instantiated into workflow.md?
+Layer 3 (Philosophy Alignment): Is the direction actually implementing Core Objective 1? Evidence-based.
+
+[Output Format]
+A. Idea meeting key axes and teammate composition.
+B. Each idea — (Core / Objective 1 connection / Trade-offs / Local execution suitability).
+C. Conflicting / unresolved points.

@@ -1,0 +1,52 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of adversarial reflection is "discovering defenseless points."
+   Defenseless = The core that must be modified. Failing to admit undefendability and arguing obstinately is considered a failure.
+
+② Local Execution Invariant — Do not miss points where attack scenarios shake the local execution premise.
+
+③ Final Output After Approval — The output of this turn is strictly the "Adversarial Reflection Report + Draft Improvement Plan."
+   Modifying the text of final-research.md is prohibited in this turn. Modifications will be guided by separate instructions in the next step.
+   PRD.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Missing/unnecessary reflections and updates completed.
+Current Step: Reflection based on Adversarial Agents A/B/C → Produce defenseless points and improvement plans.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+Key Reference Files: /prompt/prd-research/final-research.md
+[/SESSION HEADER]
+
+[Adversarial Agent Composition — Specialized Attack Vectors]
+[Adversarial Agent A — Operational Failure Specialist]
+Attack weapons: Concurrency conflicts / Unresponsive agents / State inconsistencies / Network disconnects /
+               Local resource exhaustion / Recursive infinite loops / Subscription account CLI link disconnects.
+Flaws sought: "Parts that operate, but cannot be recovered upon failure."
+
+[Adversarial Agent B — Simplicity Fundamentalist]
+Attack weapons: Simpler alternatives / Overengineering points /
+               Components yielding identical quality when removed / Excessive abstraction.
+Flaws sought: "Complexity for complexity's sake."
+
+[Adversarial Agent C — Maintainer 6 Months Later]
+Attack weapons: Incomprehensible structures / Undocumented assumptions /
+               Parts where it's unknown where to touch when changing / Loss of tags & sources.
+Flaws sought: "Parts that work now, but are traps in the future."
+
+[Defense Rules]
+- Attempt defense against all attacks using document evidence and primary sources.
+- Honestly admit undefendable points. Admission = The core that must be modified.
+- Obstinate arguing without admission is prohibited.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Factually map each agent's attack and defense results. List undefendable items only.
+Layer 2 (Structure Analysis): What blockers will defenseless points create in the actual implementation stage?
+Layer 3 (Philosophy Alignment): Does this vulnerability compromise the user's purpose (automated local implementation)? Judge by evidence.
+
+[Output Format — Report]
+A. Attack list per agent / Defense results / Undefendable verdict.
+B. 3-Layer verdict table.
+C. Draft improvement plan — Modification ideas resolving defenseless points (modifying main text is prohibited).

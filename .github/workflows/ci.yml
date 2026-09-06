@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Verify CLI Help
+        run: |
+          bun ./bin/cli.js --help
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Test Suite via CLI
+        run: |
+          bun ./bin/cli.js test
+
+      - name: Verify 100% English Purity (0 Hangul)
+        run: |
+          python3 -c "
+          import os, re
+          hangul = re.compile(r'[\uac00-\ud7a3\u1100-\u11ff\u3130-\u318f\ua960-\ua97f\ud7b0-\ud7ff]')
+          violations = []
+          for root, dirs, files in os.walk('.'):
+              if '.git' in root or 'recursive language models.pdf' in root:
+                  continue
+              for f in files:
+                  p = os.path.join(root, f)
+                  try:
+                      with open(p, 'r', encoding='utf-8', errors='ignore') as file:
+                          for i, line in enumerate(file):
+                              if hangul.search(line):
+                                  violations.append((p, i+1, line.strip()))
+                  except Exception:
+                      pass
+          if violations:
+              print(f'❌ Found {len(violations)} non-English lines:')
+              for p, line_no, text in violations[:10]:
+                  print(f'  {p}:{line_no}: {text}')
+              exit(1)
+          print('✅ Pure 100% English verified across entire repository!')
+          "

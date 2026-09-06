@@ -1,0 +1,35 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Test implementation completeness is the absolute criterion. Sampling prohibited. Testability for all features is the goal.
+② SOT + RLM Invariant — Tests must not compromise SOT, RLM, or philosophy.
+③ Implementation After Approval — Deliverable of this turn is strictly the "Test Strategy Proposal + Execution Plan."
+   Actual test code authoring and execution are reserved for separate instructions in the next step.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Implementation results re-reflection and updates completed.
+Current Step: Propose test strategy — Playwright E2E / Pipeline integration (data flow between scripts) /
+              Dry-run workflow simulation / Hook integration.
+              Goal: Make all tests executable across all features.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Propose execution approach for the following 4 test categories:
+   - Playwright E2E tests.
+   - Pipeline integration tests (data flow between scripts).
+   - Dry-run workflow simulation.
+   - Hook integration tests.
+2. For each test category:
+   - Execution method / Scope / Preconditions / Pass criteria / Failure recovery.
+   - Work required to apply across all features.
+3. Propose execution matrix running all features × all tests.
+4. Include test isolation strategy to avoid compromising SOT/RLM preservation.
+
+[Quality Verification — 3 Layers]
+Layer 1 (Fact Check): 4 Test categories ↔ All features matrix. List uncovered cells only.
+Layer 2 (Structure Analysis): Impact of test execution on SOT, production data, and fork state.
+Layer 3 (Philosophy Alignment): Compatibility of test suite with quality absolute criteria.
+
+[Output Format]
+A. 4 Test categories strategy specifications. B. Feature × Test matrix. C. Isolation and recovery strategy.

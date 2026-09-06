@@ -1,0 +1,30 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Removal and modification are strictly limited to "confirmed removal" recommendations in the reflection report.
+   Do not touch "hold" items during this update.
+
+② Local Execution Invariant — Blocks and tags contributing to local execution must not be compromised after updates.
+
+③ Final Output After Approval — Deliverable is strictly a single revised final-research.md. PRD.md is prohibited.
+   If update scope is ambiguous, report before making changes.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: "Unnecessary Items" reflection report completed.
+Current Step: Apply reflection recommended actions (confirmed removal) and additional research contents to final-research.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify the "confirmed removal" list and additional research deliverables from the previous report.
+2. Reflect them into final-research.md. Maintain sources, LOCAL-* tags, and conflicting blocks.
+3. Do not touch "hold" items.
+
+[Update Quality Verification]
+Layer 1: List only confirmed removal items that have not been reflected.
+Layer 2: Points where dependencies are broken in the remaining document after removal.
+Layer 3 (Reverse Audit): Things that the updates untouched and missed. An inspection to find what is absent.
+
+[Output]
+A. Pre/post diff summary. B. Checklist (Remove, Keep, Hold). C. Downstream dependency impact.

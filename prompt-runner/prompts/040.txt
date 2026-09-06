@@ -1,0 +1,39 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of adversarial reflection is discovering defenseless points in the PRD draft.
+   Defenseless = The core that must be modified. Obstinate arguing is prohibited.
+   Premise: The user has zero code implementation skills. We must build an agentic workflow automation where Claude Code automatically implements everything flawlessly from start to finish.
+② Local Execution Invariant — Absolutely not a SaaS model. Operates exclusively on the user's local computer.
+   Do not miss points where attack scenarios shake the local execution premise.
+③ Final Output After Approval — Output is strictly the "Adversarial Reflection Report + Draft Improvement Plan."
+   Modifying the body of /prompt/prd.md is prohibited. workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Multi-round reflections and updates on PRD draft completed.
+Current Step: Final PRD reflection based on Adversarial Agents A/B/C → Produce defenseless points and improvement plans.
+Key Reference Files: /prompt/prd.md
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+[/SESSION HEADER]
+
+[Adversarial Agent Composition]
+[A — Operational Failure Specialist] Local resource exhaustion / State inconsistency / Subscription CLI link disconnects /
+  Agent unresponsiveness / Recursive loops. "Operates, but cannot recover."
+[B — Simplicity Fundamentalist] Overengineering / Removable requirements / Excessive abstraction.
+  "Complexity for complexity's sake."
+[C — Maintainer 6 Months Later] Ambiguous requirements / Absent Objective 1 connection / Loss of tags & sources.
+  "Works now, but traps in the future."
+
+[Defense Rules]
+- Attempt defense against all attacks using PRD evidence. Honestly admit undefendable points → core to modify.
+- Obstinate arguing without admission is prohibited.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Attack-defense matrix. List undefendable items only.
+Layer 2 (Structure Analysis): What blockers will defenseless points create in workflow.md creation?
+Layer 3 (Philosophy Alignment): Does it actually compromise user objectives and Objective 1? Evidence-based.
+
+[Output Format]
+A. Attack, defense, and verdict table per agent. B. 3-Layer verdict. C. Draft improvement plan.

@@ -1,0 +1,60 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Depth, breadth, and accuracy of research are absolute criteria.
+   Especially for the coding & implementation axis, securing "options, rationales, code-level trade-offs, limitations, counter-examples"
+   is required to qualify as quality. Speed, tokens, and convenience can never be justifications.
+
+② Local Execution Invariant — This system operates exclusively on the user's local computer.
+   If options compromising local execution premises appear (cloud-only SDKs, remote runtime dependencies,
+   SaaS-only build chains, etc.), mark and report immediately.
+   Explicitly tag all options with [LOCAL-OK / LOCAL-PARTIAL / LOCAL-BLOCKED].
+
+③ Output After Approval — Writing PRD.md or synthesis documents is prohibited in this turn.
+   Deliverable is strictly "PRD direction advice on coding & implementation axis".
+   Writing even a single line of final deliverables without my approval is prohibited across all subsequent stages.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence. If ② is compromised, halt execution of ①③ and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 1st (general) + 2nd (technology & theory) in-depth research saved in /prompt/prd-research.
+Current Step: 3rd in-depth research — conduct specialized research on "Coding & Implementation Technology" axis → Output PRD direction advice.
+              (Not drafting PRD.md body. Saving will proceed under separate instructions after this turn.)
+Key Reference Files:
+  - /prompt/Coding_Implementation_DeepDive_PRD_Teammate_Executable.md (teammate composition & execution guidelines)
+  - /prompt/prd-research/ (existing storage + extension rules)
+[/SESSION HEADER]
+
+[Target]
+System to build: Test Project
+AI agentic workflow automation system that automatically implements this on the user's local computer.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+Focus of this turn: In-depth research on "Coding & Implementation Technology" required for this system to work reliably.
+Final deliverable of this turn: "PRD.md production direction advice on coding & implementation axis" (not PRD.md body).
+
+[Task Instructions]
+1. Read /prompt/Coding_Implementation_DeepDive_PRD_Teammate_Executable.md first and strictly follow the teammate guidelines therein.
+2. Form an agent-team (teammates) as instructed to conduct in-depth research on "Coding & Implementation Technology".
+   - Depth: Prohibit superficial framework name listing.
+           Each option must include (code structure & actual implementation difficulty → prerequisites → trade-offs → limitations → counter-examples).
+   - Breadth: Coding and implementation tech axes necessary for this service to function smoothly without omission.
+3. Present "what needs to be done + why it is a candidate + what must be compromised if chosen" for each option.
+   Merely announcing conclusions is prohibited.
+4. Local execution feasibility tagging: Explicitly tag all options with [LOCAL-OK / LOCAL-PARTIAL / LOCAL-BLOCKED].
+   For LOCAL-BLOCKED items, a one-line rationale for exclusion is mandatory.
+
+[Research Quality Verification — Self-Check Before Output]
+Layer 1 (Fact Check): Does teammate findings match the "Coding & Implementation Technology Axis" scope? List discrepancies only.
+Layer 2 (Structure Analysis): When structuring the PRD implementation section using these findings, where does it collapse first?
+                             (e.g., unverified inter-option compatibility, missing version/platform dependencies, absence of LOCAL-* tags)
+Layer 3 (Reverse Audit): What has this research "NOT covered"?
+                        List missing coding/implementation items necessary for PRD.
+                        An audit to discover what is missing.
+
+[Output Format — Deliverables for This Turn]
+A. Teammate composition & execution summary — who took which implementation axis and what was investigated.
+B. In-depth research core findings — structured per option by
+   (actual implementation patterns / prerequisites / trade-offs / limitations / counter-examples / local execution tag).
+C. PRD.md production direction advice — which sections of PRD should reflect coding/implementation axis with what perspectives.
+   (※ Do not write PRD.md body.)

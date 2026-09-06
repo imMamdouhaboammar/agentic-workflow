@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed recommended actions for fatal and dangerous items.
+② Local Execution Invariant — Maintain tags and premises.
+③ Final Output After Approval — Deliverable is strictly a single revised /prompt/workflow-idea/workflow-idea.md.
+   workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: workflow-idea.md fatal flaws reflection report completed.
+Current Step: Apply recommended actions to /prompt/workflow-idea/workflow-idea.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify recommended actions for fatal and dangerous items.
+2. Apply to workflow-idea.md. Do not touch minor or harmless items.
+
+[Update Quality Verification]
+Layer 1: List only fatal/dangerous recommended actions that have not been reflected.
+Layer 2: Points where other blocks shake after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. Impact check.

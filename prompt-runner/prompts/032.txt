@@ -1,0 +1,26 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to recommended actions and additional research results confirmed in reflection.
+② Local Execution Invariant — Maintain local execution premise and LOCAL-* tags after updates.
+③ Final Output After Approval — Deliverable is strictly a single revised /prompt/prd.md. workflow.md is prohibited.
+   If update scope is ambiguous, report before making changes.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: PRD draft reflection (based on user objective & intent) completed.
+Current Step: Apply recommended actions and additional research contents to /prompt/prd.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify recommended actions and additional research results from the previous reflection report.
+2. Apply to /prompt/prd.md. Maintain Core Objective 1 anchor, local execution premise, and scope principles (what to build).
+3. Be careful not to introduce out-of-scope material (implementation procedures, stack selection, etc.).
+
+[Update Quality Verification]
+Layer 1: List only recommended actions that have not been reflected.
+Layer 2: Points where Core Objective 1 mapping breaks down after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. Pre/post diff summary. B. Checklist. C. Re-confirmation of Core Objective 1 mapping.

@@ -1,0 +1,33 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Identification of unresolved items and "comparison of choice outcomes" is the absolute criterion.
+   Do not collapse into a single conclusion; provide complete information necessary for user choice.
+② Local Execution Invariant — Must explicitly state local execution suitability of each option.
+③ Final Output After Approval — Output is strictly "Unresolved Items Report + Option Comparative Analysis."
+   Modifying the text of workflow-idea.md or workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Final updates to workflow-idea.md completed.
+Current Step: Exhaustive detection of unresolved items + comparative analysis of options → Support user decisions.
+Key Reference Files: /prompt/workflow-idea/workflow-idea.md
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Exhaustively detect matters remaining in an "unresolved" state from workflow-idea.md and all reflection records to date.
+2. For each unresolved item:
+   - List options (at least 2).
+   - Expected outcomes of each option (pros / cons / risks).
+   - Local execution suitability tag.
+   - Alignment judgment with Core Objective 1.
+   - What additional information would make the decision easier.
+3. Structure comparative analysis so that the user can make an "informed choice."
+
+[Quality Verification]
+Layer 1 (Fact Check): Has exhaustive detection of unresolved items been completed? List missed items only.
+Layer 2 (Structure Analysis): Does the option comparison cover all axes necessary for decision?
+Layer 3 (Reverse Audit): Are there alternatives that the options are missing? An inspection to find what is absent.
+
+[Output Format]
+A. List of unresolved items. B. Option comparison table per item. C. "Decision support information" rather than recommendations.

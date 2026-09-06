@@ -1,0 +1,24 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to modifications "most essential to philosophy, purpose, and core."
+② SOT + RLM Invariant — Preservation check.
+③ Implementation After Approval — Deliverable is selective modifications to codebase and documentation. Arbitrary changes outside approved scope prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Implementation results re-reflection report (including fatal and dangerous defects).
+Current Step: Selectively apply only items "most essential to philosophy, purpose, and core" among recommended actions.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Evaluate recommended actions (Essential / Useful / Rejected).
+2. Apply only essential items to code and documentation.
+
+[Update Quality Verification]
+Layer 1: Verdict ↔ Update mapping. List unaddressed essential items only.
+Layer 2: Consistency impact after updates.
+Layer 3 (Reverse Audit): Essential items that selection missed.
+
+[Output]
+A. Verdict table. B. diff summary. C. SOT/RLM re-confirmation.

@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed omitted and distorted items from the audit.
+② Local Execution Invariant — Maintain tags and premises.
+③ Final Output After Approval — Deliverable is strictly a single revised /prompt/workflow-idea/workflow-idea.md.
+   workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: workflow-idea.md final audit report completed.
+Current Step: Apply audit recommended actions to /prompt/workflow-idea/workflow-idea.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify omitted/distorted items and recommended actions from the audit report.
+2. Apply to workflow-idea.md. Maintain Objective 1, local execution tags, and conflicting blocks.
+
+[Update Quality Verification]
+Layer 1: List only items that have not been reflected.
+Layer 2: Points where consistency is shaken after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. Consistency check.

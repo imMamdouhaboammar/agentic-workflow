@@ -1,0 +1,26 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Document is the implementation blueprint. Ambiguity is failure.
+② Implementation After Approval — Deliverable of this turn is strictly a single /prompt/workflow-coding.md. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Infrastructure Build design proposed and dialogue finalized.
+Current Step: Save finalized design into /prompt/workflow-coding.md document.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Record finalized design into /prompt/workflow-coding.md.
+2. Structure: Architecture overview / Teammates / Orchestrator / Subagents / Skills / Hooks /
+             Commands / Task verification / Fork / Fallback / SOT / TDD / English operation /
+             Authoring plan for 3 evaluation criteria files (code-convention / ADR / code-quality-guide).
+3. Check Objective 1 connection, local execution premise, and SOT/RLM preservation in each section.
+
+[Quality Verification]
+Layer 1: Design items ↔ Document sections mapping. List omissions only.
+Layer 2: Where does it become ambiguous first when actual implementation starts from document?
+Layer 3 (Reverse Audit): What does the document NOT cover?
+
+[Output]
+A. /prompt/workflow-coding.md table of contents. B. Section-by-section executive summary. C. Ambiguity points.

@@ -1,0 +1,28 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Recommendations must be evidence-based selections.
+   Not "safe compromises", but "optimal for Core Objective 1."
+② Local Execution Invariant — Local execution suitability is the top judgment axis.
+③ Final Output After Approval — Deliverable of this turn is strictly "Final Recommendations per Unresolved Item + Rationale."
+   Modifying the body of workflow-idea.md or workflow.md is prohibited. Workflow.md creation is prohibited (prior to that stage).
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Unresolved items comparative analysis completed.
+Current Step: Present final recommendations for each unresolved item (user choice).
+              Workflow.md creation has not started yet.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Select one final recommendation for each unresolved item from the previous turn.
+2. For each recommendation, specify (Rationale / Objective 1 alignment / Local execution tag / Reason for excluding alternatives).
+3. Present separately by item so that the user can accept or alter each recommendation.
+
+[Quality Verification]
+Layer 1: Does each unresolved item have a 1:1 corresponding recommendation? List unaddressed items only.
+Layer 2: Are there conflicts among the recommendations?
+Layer 3 (Reverse Audit): Are there unresolved axes that the recommendations did not address?
+
+[Output]
+A. List of recommendations (Item / Recommendation / Rationale / Reason for exclusion). B. Conflict check.

@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to modifications and upgrades "most essential to philosophy, purpose, and core."
+   Context memory optimization is adopted only when contributing to "supreme deliverables."
+② SOT + RLM Invariant — Preservation check. Re-verify optimization does not compromise SOT/RLM.
+③ Implementation After Approval — Deliverable is selective modifications to codebase and documentation. Arbitrary changes outside approved scope prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Codebase + context memory inspection report.
+Current Step: Selectively apply only items "most essential to philosophy, purpose, and core" among report recommendations.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Evaluate recommended actions (Essential / Useful / Rejected).
+2. Apply only "Essential" items to codebase and documentation. Re-verify SOT/RLM integrity.
+
+[Update Quality Verification]
+Layer 1: Verdict ↔ Update mapping. List unaddressed essential items only.
+Layer 2: Impact on SOT, RLM, and teammate coordination after updates.
+Layer 3 (Reverse Audit): Essential items that selection missed.
+
+[Output]
+A. Verdict table. B. diff summary. C. SOT/RLM preservation re-confirmation.

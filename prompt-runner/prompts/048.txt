@@ -1,0 +1,36 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — This reflection is an exhaustive inspection for "fatal flaws."
+   Under the premise that fatal flaws were already discovered in previous reflections, find additional flaws without omission.
+   The conclusion "none exist" is prohibited without exhaustive investigation evidence.
+
+② Local Execution Invariant — Flaws that shake the local execution premise are top-priority detection targets.
+
+③ Final Output After Approval — Output is strictly the "Fatal Flaws Reflection Report."
+   Modifying the text of /prompt/workflow-idea/workflow-idea.md is prohibited. workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: workflow-idea.md Round 1 reflection and updates completed.
+              In this process, fatal flaws from the perspective of user objectives and Objective 1 were previously discovered.
+Current Step: Exhaustive inspection of workflow-idea.md — Detect additional fatal flaws.
+Key Reference Files: /prompt/workflow-idea/workflow-idea.md
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+[/SESSION HEADER]
+
+[Flaw Detection Instructions]
+1. Conduct an exhaustive inspection across all blocks and ideas in the document (sampling prohibited).
+2. For each item, evaluate "fatality with respect to user objectives and Objective 1":
+   [Fatal / Dangerous / Minor / Harmless].
+3. List fatal and dangerous items along with citations of evidence.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Number of exhaustively inspected items / Distribution of ratings. List unrated items only.
+Layer 2 (Structure Analysis): What blockers will fatal items create in writing workflow.md?
+Layer 3 (Philosophy Alignment): Points where Objective 1 and user objectives are actually compromised. Evidence-based.
+
+[Output Format]
+A. Exhaustive inspection statistics + Fatal/Dangerous list. B. 3-Layer verdict. C. Revision priorities.

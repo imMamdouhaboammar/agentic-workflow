@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed recommended actions from reflection.
+② SOT + RLM Invariant — Preservation check.
+③ Comply with English Operation + Korean Translation Absolute Principle.
+④ Implementation After Approval — Deliverable is strictly a single updated /prompt/workflow-coding.md. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 2 Absolute Standards (Quality · English + Translation) compliance reflection completed.
+Current Step: Apply recommended actions to /prompt/workflow-coding.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify confirmed recommended actions and creation proposals for missing translation-related components.
+2. Apply to /prompt/workflow-coding.md.
+
+[Update Quality Verification]
+Layer 1: List only recommended actions that have not been reflected.
+Layer 2: Points where document consistency is shaken after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. SOT/RLM · English/Translation principle compliance re-confirmation.

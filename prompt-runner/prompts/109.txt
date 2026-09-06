@@ -1,0 +1,27 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Evaluate and selectively execute tests judged "most essential to philosophy, purpose, and core."
+② SOT + RLM Invariant — Compromising preservation during test execution is prohibited. Comply with isolation strategy.
+③ Approved State — Proposed test implementation is approved.
+   However, arbitrary expansion outside approved scope is prohibited. Report before expanding if necessary.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Test strategy proposal completed.
+Current Step: Selectively implement and execute tests "most essential to philosophy, purpose, and core" among proposed tests.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Evaluate proposed test list (Essential / Useful / Hold).
+2. Implement and execute only "Essential" tests.
+3. Record execution results for each test + Root cause analysis for failed items.
+4. Self-check impact on SOT, RLM, fork, and data isolation.
+
+[Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Essential tests ↔ Execution results. List unexecuted/unevaluated items only.
+Layer 2 (Structure Analysis): Impact of test failures on actual execution quality.
+Layer 3 (Philosophy Alignment): Do test results substantiate SOT/RLM/philosophy preservation?
+
+[Output Format]
+A. Test evaluation and execution table. B. Failure list + Root causes. C. Isolation impact re-confirmation.

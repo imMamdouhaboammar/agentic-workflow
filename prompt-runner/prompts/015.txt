@@ -1,0 +1,45 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Rigor of audit, omission detection power, and evidence-based judgment are absolute criteria.
+   Claiming "perfectly reflected" without concrete evidence is prohibited.
+
+② Local Execution Invariant — If items compromising local execution premises are discovered during audit, mark separately immediately.
+
+③ Final Output After Approval — Deliverable for this turn is strictly the "audit report".
+   Do not modify final-research.md body in this turn. Modifications proceed under separate instructions in the next stage.
+   Drafting PRD.md is also prohibited.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: /prompt/prd-research/final-research.md created.
+Current Step: Rigorously audit whether final-research.md **perfectly reflects** all pre-research documents in /prompt/prd-research/ → Output report.
+Key Reference Files:
+  - /prompt/prd-research/final-research.md (audit target)
+  - Source research files in /prompt/prd-research/ (audit benchmark)
+[/SESSION HEADER]
+
+[Target]
+Reflection completeness of final-research.md — audit whether it aligns with user purpose and intent.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+
+[Audit Instructions]
+1. Identify all source files in /prompt/prd-research/ (by pass, axis, teammate).
+2. Map where each source item is reflected within final-research.md blocks/sentences.
+3. Classify reflection types: [Complete / Partial / Omitted / Distorted / Lost Source].
+4. Untraceable items (missing source links) are also treated as quality failures.
+
+[Audit Quality Verification — Self-Check Before Reporting]
+Layer 1 (Fact Check): Are source file list and mapping table complete? List unmapped source items only.
+Layer 2 (Structure Analysis): When utilizing audit results for actual revisions, which items wobble first?
+                             (e.g., distorted summaries, hidden conflicts, vanished LOCAL-* tags)
+Layer 3 (Reverse Audit): What is the audit itself missing?
+                         (e.g., conclusions newly introduced into final-research.md that were absent from sources)
+                         An audit to discover what is missing.
+
+[Output Format — Deliverables for This Turn]
+A. Source ↔ final-research.md reflection mapping table (source item / reflection status / location / type).
+B. List of omitted, distorted, or lost-source items (citing evidence sentences).
+C. Overall audit evaluation — evidence-based verdict on "perfect reflection".

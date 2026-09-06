@@ -1,0 +1,39 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Speed and tokens completely ignored. Quality and qualitative level is the absolute criterion.
+   Selection criterion between subagents vs agent-teams is quality. SOT must actually function.
+
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. Single-file SOT + hierarchical memory integrity.
+   RLM pattern strictly maintained. Report before proposing if potential compromise is seen.
+
+③ English Operation + Korean Translation Absolute Principle — All processes and deliverables in English during execution.
+   At each stage, Korean translation subagent saves original English + Korean translation pairs.
+   Immediately create any missing components among Task Management / agent-teams / orchestrator / subagents / skills /
+   hooks / commands / task verification.
+
+④ Implementation After Approval — Deliverable of this turn is strictly the "Reflection + Design Revision Proposal." Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence. If ② is shaken, halt and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Senior Architect Critical Reflection updates completed.
+Current Step: Infrastructure Build reflection — Confirm and re-check compliance with quality standards + English/translation absolute principles.
+[/SESSION HEADER]
+
+[Task Instructions — Reflection]
+1. Re-check whether current Infrastructure Build design faithfully reflects the following 2 absolute standards:
+   (1) Quality first + SOT actually functioning + subagent vs agent-teams selection criterion = quality.
+   (2) English operation + Korean translation pairs saved.
+2. List deficient points along with concrete evidence.
+3. If any Korean translation components are missing among Task Management / agent-teams / orchestrator / subagents / skills / hooks /
+   commands / task verification, recommend as "immediate creation proposal."
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): 2 Absolute standards ↔ Design mapping. List unreflected items only.
+Layer 2 (Structure Analysis): What blockers will unreflected points create in actual execution?
+Layer 3 (Philosophy Alignment): Verification of SOT/RLM/philosophy preservation. Evidence-based.
+
+[Output Format]
+A. 2 Absolute standards compliance mapping. B. Missing translation-related components list.
+C. Design revision proposal.

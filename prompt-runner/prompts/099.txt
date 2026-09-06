@@ -1,0 +1,36 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Token reduction is not the goal. Context memory optimization is for "supreme implementation, performance, and deliverables."
+   Token cost ignored. Absolute goal: supreme deliverables. Other criteria are secondary.
+
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. SOT integrity. RLM pattern maintained.
+
+③ Implementation After Approval — Deliverable of this turn is strictly the "Codebase & Structure Inspection · Reflection Report."
+   Code and documentation modifications are reserved for separate instructions in the next step.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Language principle compliance reflection and updates completed.
+Current Step: Exhaustive inspection of codebase & code structure + Context memory optimization reflection.
+[/SESSION HEADER]
+
+[Task Instructions — Inspection Targets]
+1. Detect unimplemented or improperly implemented parts relative to workflow absolute goals. In particular:
+   Task Management System / agent-teams / Agent Swarm / orchestrator /
+   skill-creator / subagent-creator / subagents / skills / hooks / commands / task verification.
+2. Context memory optimization:
+   - Purpose: Structure optimization for supreme deliverables (not token reduction).
+   - Inspection: Efficiency of hierarchical memory structure, context propagation across agents,
+     SOT access paths, context reusability in RLM pattern.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Absolute goals ↔ Implementation mapping. List unimplemented items and defects only.
+Layer 2 (Structure Analysis): Points where context memory optimization is possible and its impacts.
+                             Risk of optimization compromising SOT, RLM, or teammate coordination.
+Layer 3 (Philosophy Alignment): Compatibility of optimization with philosophy, purpose, and core preservation. Evidence-based.
+
+[Output Format]
+A. Absolute goals ↔ Implementation mapping table. B. Unimplemented and defect list.
+C. Context memory optimization proposals + Risk analysis.

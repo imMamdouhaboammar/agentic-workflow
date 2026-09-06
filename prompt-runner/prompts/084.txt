@@ -1,0 +1,24 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed "Python Replacement" recommendations from reflection.
+② SOT + RLM Invariant — Preservation check.
+③ Implementation After Approval — Deliverable is strictly a single updated /prompt/workflow-coding.md. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Hallucination risk reflection + Python replacement candidate proposal completed.
+Current Step: Apply confirmed replacement candidates + recommended actions to /prompt/workflow-coding.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify confirmed replacement candidates and recommended actions.
+2. Apply to /prompt/workflow-coding.md. Preserve SOT/RLM/philosophy.
+
+[Update Quality Verification]
+Layer 1: List only replacement / recommended actions that have not been reflected.
+Layer 2: Ensure no adverse impact on teammate coordination or SOT access after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. SOT/RLM re-confirmation.

@@ -1,0 +1,37 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Speed and tokens completely ignored. Quality and qualitative level is the absolute criterion.
+   "Tasks/skills/functions requiring rigor, 100% precision, and repeatable execution are best replaced with Python code to fundamentally block hallucination" — seeking your analysis on this direction.
+
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. Single-file SOT + hierarchical memory integrity.
+   RLM pattern strictly maintained. SOT must actually function.
+
+③ Implementation After Approval — Output of this turn is strictly "Hallucination Risk Detection + Python Replacement Candidate Proposals."
+   Modifying the text of /prompt/workflow-coding.md is prohibited. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Quality standards + English/translation principles integrated.
+Current Step: Exhaustive reflection on Infrastructure Build features — Identify hallucination risk points + Propose Python replacement candidates.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Exhaustively inspect tasks/skills/functions in Infrastructure Build.
+2. Evaluate each item across 3 axes: [Rigor · Repeatability · Hallucination Risk]:
+   - Rigor: Is a 100% precise outcome required?
+   - Repeatability: Must identical outputs be produced repeatedly for identical inputs?
+   - Hallucination Risk: Is there high probability of erroneous LLM output?
+3. Classify items high in all 3 axes as "Python Code Replacement Candidates."
+   - Why LLM is risky / How it can be implemented in Python / What is sacrificed upon replacement.
+4. Provide feedback and risk points regarding this direction (fundamentally blocking hallucination via Python).
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Number of exhaustively inspected items and classification results. List unclassified items only.
+Layer 2 (Structure Analysis): What impact will Python replacement have on SOT, teammate coordination, and RLM patterns?
+Layer 3 (Philosophy Alignment): Verification of philosophy, purpose, and core preservation. Evidence-based.
+
+[Output Format]
+A. 3-Axis evaluation table per item. B. Python replacement candidate list + rationales.
+C. Feedback on proposed direction (Agree / Modify / Oppose + Reasons).

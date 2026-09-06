@@ -1,0 +1,50 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Clarity, reusability, and traceability of storage structure are absolute criteria.
+   Following the existing extension rules established in step 002 is part of quality. Do not modify rules arbitrarily.
+
+② Local Execution Invariant — Verify that all options in the 2nd research results (technology & theory axis)
+   have LOCAL-OK/PARTIAL/BLOCKED tags and rationales before saving.
+
+③ Final Output After Approval — The only permitted deliverable in this turn is "2nd research result storage files".
+   Drafting PRD.md, synthesis documents, or summary conclusions is prohibited.
+   If cases difficult to accommodate under extension rules arise, do not arbitrarily change them; report first.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence. If ② is compromised, halt execution of ①③ and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 2nd in-depth research (technology & theory axis) completed.
+Current Step: Save 2nd research results into /prompt/prd-research folder.
+              Follow existing extension rules (from step 002) exactly.
+Key Reference Files: /prompt/prd-research/ (1st research storage + extension rules)
+[/SESSION HEADER]
+
+[Target]
+All 2nd in-depth research results (technology & theory axis).
+Storage location: /prompt/prd-research/ — existing folder, adhere to existing extension rules.
+
+[Task Instructions]
+1. Check /prompt/prd-research/ current structure and extension rules first.
+   This saving task slots the 2nd research results into the existing rules.
+2. Separate and save 2nd results according to extension rules:
+   - Pass tagging: Explicitly specify research pass = 2nd pass.
+   - Axis tagging: Explicitly tag as technology & theory axis, distinguishable from 1st pass (general).
+   - Separation by axis: Separate by teammate and technical axis. Single monolithic file prohibited.
+   - Mandatory metadata: Research pass / research axis / teammate identity / creation timestamp /
+                         original question / evidence sources / LOCAL-* tags.
+   - Maintain separation between raw and summary.
+3. For items difficult to accommodate under rules, do not bypass. Report first if modification is required.
+
+[Storage Quality Verification — Self-Check Before Completion]
+Layer 1 (Fact Check): Were all 2nd research outputs saved? Are LOCAL-* tags assigned to all options?
+Layer 2 (Structure Analysis): In 1st+2nd state, when 3rd~5th additional research accumulates,
+                             at what point do existing extension rules break down?
+Layer 3 (Reverse Audit): What was missed in this storage that will be needed at synthesis stage?
+                         (e.g., conflicts with 1st pass, counter-examples in 2nd pass, discarded candidates)
+                         An audit to discover what is missing.
+
+[Output Format — Deliverables for This Turn]
+A. Entire /prompt/prd-research/ structure after saving (tree format — showing both 1st & 2nd pass).
+B. List of files created/modified in this turn and one-line description of each file's role.
+C. Existing extension rules application result — accepted as-is / boundary issues / rule modification proposal.

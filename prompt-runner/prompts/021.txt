@@ -1,0 +1,43 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of this reflection is "removing unnecessary items."
+   Unnecessary determinations must be evidence-based, demonstrating concretely their lack of relevance to user goals.
+
+② Local Execution Invariant — Be careful not to misclassify items contributing to local execution as "unnecessary" during removal review. Preserve local execution-related items by default.
+
+③ Final Output After Approval — The output of this turn is strictly the "Unnecessary Items Reflection Report."
+   Do not modify the body of final-research.md in this turn. Modifications will be guided by separate instructions in the next step.
+   Drafting PRD.md is also prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence. If removal is ambiguous, do not recommend deletion; mark as pending.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: "Missing Items" reflection and updates completed.
+Current Step: Teammate-based reflection — Detect items that are **unnecessary** to user objectives and intent in final-research.md.
+Key Reference Files: /prompt/prd-research/final-research.md
+[/SESSION HEADER]
+
+[User Objective & Intent (Reflection Criteria)]
+1) Writing PRD.md for an AI agentic workflow automation system that automatically implements Test Title on the user's local computer.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+2) The user has zero code implementation skills. Claude Code automatically implements everything flawlessly from start to finish.
+
+[Reading Protocol — 4 Stages]
+Stage 1: Focus on essence (What/Why). Grasp only purpose, philosophy, and direction.
+Stage 2: Associative expansion. Identify system requirements such as service steps, processes, features, and implementation ideas.
+Stage 3: Precision reinforcement of intermediate sections.
+Stage 4: [Reverse Audit] List items within this document whose direct connection to the user's purpose has been severed.
+         Not "things that are nice to have," but "things whose absence causes no impediment to achieving the goal."
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Map how each item connects to user objectives. List only items with no connection.
+Layer 2 (Structure Analysis): Are there other blocks that collapse when candidate unnecessary items are removed?
+                             (Reverse dependency trace. If dependencies exist → removal prohibited.)
+Layer 3 (Philosophy Alignment): Does removal compromise the user's purpose (① automated local implementation ② premise of user without coding skills)? Judge by evidence.
+
+[Output Format — Reflection Report]
+A. Stage 4 reverse audit reading results — Candidate list of unnecessary items.
+B. 3-Layer verdict table (Item / Layer 1 / Layer 2 / Layer 3 / Verdict: Remove, Hold, Keep).
+C. Caution: Arbitrary removal of items rated "Hold" or above is prohibited. Deletion recommendations only when evidence is complete.

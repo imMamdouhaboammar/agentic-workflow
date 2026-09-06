@@ -1,0 +1,73 @@
+# state.yaml — SOT (Single Source of Truth) Template
+# Only Orchestrator/Team Lead modifies this file during workflow execution (Absolute Criterion 2).
+# All agents access read-only.
+
+workflow:
+  name: "[workflow-name]"
+  current_step: 1
+  status: "in_progress"     # in_progress | completed | failed
+
+  # Parent genome metadata (lineage tracking — soul.md §0)
+  parent_genome:
+    source: "AgenticWorkflow"
+    version: "2026-02-20"
+    inherited_dna: ["absolute-criteria", "sot-pattern", "3-phase-structure", "4-layer-qa", "safety-hooks", "adversarial-review", "decision-log", "context-preservation", "cross-step-traceability", "domain-knowledge-structure"]
+
+  # Step deliverables paths — Anti-Skip Guard verifies file existence + minimum size (100 bytes)
+  outputs:
+    # step-1: "research/collected-data.md"
+    # step-1-trans: "research/collected-data.translated.md"   # @translator translated output
+    # step-2: "research/insights.md"
+
+  # (human) step state — tracks auto-approval in Autopilot mode
+  pending_human_action:
+    step: null               # Current pending (human) step number
+    options: []              # List of options
+
+  # --- Added when Agent Team is active (only while a team step is in progress) ---
+  # active_team:
+  #   name: "[team-name]"              # Name passed to TeamCreate
+  #   status: "partial"                # D-4: Allowed values: partial (in progress) | all_completed (all tasks completed)
+  #   tasks_completed: []              # Completed task IDs
+  #   tasks_pending: []                # Pending task IDs
+  #   completed_summaries:             # RLM Layer 2 — preserves team context upon session restore
+  #     task-1:
+  #       agent: "@[agent-name]"
+  #       model: "[opus|sonnet|haiku]"
+  #       output: "[deliverable path]"
+  #       summary: "[1-2 sentence work summary]"
+  # completed_teams: []                # Completed team history (audit trail)
+
+  # --- Added when Autopilot mode is active (AGENTS.md §5.1 canonical schema) ---
+  # autopilot:
+  #   enabled: false                   # true | false
+  #   decision_log_dir: "autopilot-logs/"
+  #   auto_approved_steps: []          # List of auto-approved (human) steps
+
+  # --- Added when pACS is active (AGENTS.md §5.4) ---
+  # pacs:
+  #   current_step_score: 72          # Current step pACS = min(F, C, L)
+  #   dimensions:                     # 3-dimensional scoring results
+  #     F: 72                         # Factual Grounding
+  #     C: 85                         # Completeness
+  #     L: 78                         # Logical Coherence
+  #   weak_dimension: "F"             # min-score dimension
+  #   pre_mortem_flag: null           # Pre-mortem Protocol weakness identification (string)
+  #   history:                        # Step-by-step history
+  #     step-1: {score: 85, weak: "C"}
+  #     step-2: {score: 72, weak: "F"}
+
+  # --- Verification history (AGENTS.md §5.3) ---
+  # verification:
+  #   last_verified_step: 2            # Last passed verification step
+  #   retries:                         # Retry history (up to 10 retries, 15 with ULW)
+  #     step-2: 1                      # 1 retry occurred at step-2
+
+  # --- Domain Knowledge Structure (optional — activated when built in Research phase) ---
+  # domain_knowledge:
+  #   file: "domain-knowledge.yaml"
+  #   entity_count: 0
+  #   relation_count: 0
+  #   constraint_count: 0
+  #   built_at_step: null
+  #   last_validated: null

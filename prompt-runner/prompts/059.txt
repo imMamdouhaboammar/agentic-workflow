@@ -1,0 +1,62 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — workflow.md is the "blueprint that Claude Code actually executes automatically."
+   Ambiguity is execution failure. Ensure each stage has executable inputs, outputs, and evaluation criteria.
+
+② Local Execution Invariant — All stages assume automatic execution on the user's local computer.
+   SaaS or remote dependency stages are prohibited. If external APIs are required, specify calling them from local.
+
+③ Core Objective 1 Anchored — Anchor Core Objective 1 below as the absolute goal across all stages and features of the workflow.
+   Connection lines to Objective 1 must be explicitly stated in each stage.
+
+④ Final Output After Approval — Deliverable of this turn is strictly a single /prompt/workflow.md.
+   Generate using workflow-generator skill, with save location at /prompt/workflow.md.
+   Actual code implementation must NOT begin. This turn is the blueprint authoring stage.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: prd.md + workflow-idea.md finalized + unresolved item recommendations selected.
+Current Step: Author workflow.md blueprint → /prompt/workflow.md
+Skill to use: /.claude/skills/workflow-generator
+Key Reference Files:
+  - /prompt/workflow-idea/workflow-idea.md
+  - /prompt/prd.md
+[/SESSION HEADER]
+
+[User Premise]
+The user has zero code implementation skills. Claude Code understands user intent and
+automatically implements everything flawlessly from start to finish on the local computer.
+
+[★ Core Objective 1]
+Test Goal
+
+[Reading Protocol — 4 Stages × 2 Documents]
+Perform 4-stage reading on each of the two files:
+Stage 1: Focus on essence (What/Why). Purpose, philosophy, direction.
+Stage 2: Associative expansion. Requirements, stages, features, implementation ideas.
+Stage 3: Precision reinforcement of intermediate sections.
+Stage 4: [Reverse Audit] List things not covered by these documents that are needed for workflow design.
+
+[Task Instructions]
+1. Grasp /prompt/workflow-idea/workflow-idea.md and /prompt/prd.md via 4-stage reading.
+2. Use workflow-generator skill (/.claude/skills/workflow-generator) to generate workflow.md.
+3. Save location for workflow.md: /prompt/workflow.md
+4. Generation principles:
+   - Each stage must specify inputs, outputs, evaluation criteria, and failure recovery.
+   - Explicitly specify connection to Core Objective 1 in each stage.
+   - Verify that local execution premise is maintained across each stage.
+5. This turn is blueprint drafting. Actual code implementation proceeds only under separate instructions later.
+
+[Authoring Quality Verification — 3 Layers]
+Layer 1 (Fact Check): prd.md/workflow-idea.md requirements ↔ workflow.md stages mapping. List omissions only.
+Layer 2 (Structure Analysis): When Claude Code executes automatically "from start to finish" with this blueprint,
+                             where does it become unexecutable first?
+Layer 3 (Philosophy Alignment): Does each stage actually implement Core Objective 1? Evidence-based.
+
+[Output Format]
+A. Table of contents of generated /prompt/workflow.md.
+B. prd ↔ idea ↔ workflow mapping.
+C. Summary of each stage (Inputs / Outputs / Judgment / Recovery / Objective 1 connection).
+D. Points where execution viability is shaken in this blueprint.

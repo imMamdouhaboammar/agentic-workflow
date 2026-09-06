@@ -1,0 +1,40 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Revision work is "evidence-based modification".
+   Do not arbitrarily add or delete content not raised in the audit/reflection.
+
+② Local Execution Invariant — LOCAL-* tags must be preserved across all options in final-research.md after revision.
+   Lost tags constitute failure.
+
+③ Final Output After Approval — Deliverable for this turn is strictly the revised final-research.md.
+   Drafting PRD.md is prohibited. Revision scope is limited to recommended actions and additional in-depth research results.
+   If revision scope is ambiguous, report before modifying.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: final-research.md audit & reflection report + (if needed) additional in-depth research completed.
+Current Step: Apply recommended actions & additional research results into /prompt/prd-research/final-research.md.
+Key Reference Files:
+  - /prompt/prd-research/final-research.md
+  - Previous turn's audit & reflection reports / additional research deliverables
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify recommended actions list from audit/reflection reports and additional research deliverables first.
+2. Map each item to the appropriate block/sentence in final-research.md and apply edits.
+3. Revision principles:
+   - Preserve sources: Retain source links or audit evidence links for newly added content.
+   - Preserve tags: Do not damage LOCAL-* tags and Conflict blocks.
+   - Avoid over-determining: Keep items requiring user decisions marked as 'Conflict/Unresolved'.
+
+[Reflection Integration Quality Verification — Self-Check Before Completion]
+Layer 1 (Fact Check): List only recommended actions / additional research items that were not applied.
+Layer 2 (Structure Analysis): Points where source traceability, tags, or conflict blocks break down when reading revised document.
+Layer 3 (Reverse Audit): What did the revision "miss without touching"? An audit to discover what is missing.
+
+[Output Format]
+A. Pre/post revision diff summary (block-level).
+B. Recommended actions reflection checklist.
+C. Retained conflict and unresolved points.

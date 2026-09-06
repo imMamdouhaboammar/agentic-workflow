@@ -1,0 +1,48 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Clarity, reusability, and traceability of storage structure are absolute criteria.
+   Follow existing extension rules without arbitrary modifications.
+
+② Local Execution Invariant — All options in the 4th research results (external integration axis)
+   must have LOCAL-OK/PARTIAL/BLOCKED tags + rationales.
+
+③ Final Output After Approval — The only permitted deliverable in this turn is "4th research result storage files".
+   Drafting PRD.md, synthesis documents, or conclusions is prohibited.
+   If cases difficult to accommodate under extension rules arise, do not arbitrarily modify; report first.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 4th in-depth research (external integration axis) completed.
+Current Step: Save 4th research results into /prompt/prd-research folder adhering to existing extension rules.
+Key Reference Files: /prompt/prd-research/ (1st, 2nd, 3rd storage + extension rules)
+[/SESSION HEADER]
+
+[Target]
+All 4th in-depth research results (external integration axis).
+Storage location: /prompt/prd-research/ — existing folder, follow existing extension rules.
+
+[Task Instructions]
+1. Check /prompt/prd-research/ current structure and extension rules first.
+2. Separate and save 4th results according to extension rules:
+   - Pass tagging: Research pass = 4th pass.
+   - Axis tagging: Explicitly tag as external integration axis, distinguishable from existing axes.
+   - Separation by axis: Separate by teammate and integration target. Single monolithic file prohibited.
+   - Mandatory metadata: Research pass / research axis / teammate identity / creation timestamp /
+                         original question / evidence sources (including official doc links) / LOCAL-* tags /
+                         (for OpenAI & Gemini items) CLI-subscription compliance status.
+   - Maintain separation between raw and summary.
+3. For items difficult to accommodate under rules, do not bypass. Report first if modification is required.
+
+[Storage Quality Verification — Self-Check Before Completion]
+Layer 1 (Fact Check): Were all 4th research outputs saved? Any missing tags or sources?
+                      Are all CLI-subscription compliance fields filled for OpenAI & Gemini items?
+Layer 2 (Structure Analysis): In 1st~4th state, where do extension rules begin to wobble?
+                             (e.g., overlapping axis boundaries, conflicting options across passes)
+Layer 3 (Reverse Audit): What was missed in this storage that will be needed at synthesis stage? An audit to discover what is missing.
+
+[Output Format — Deliverables for This Turn]
+A. Entire /prompt/prd-research/ tree after saving.
+B. Files created/modified in this turn and their roles.
+C. Rule application results — accepted / boundary issues / modification proposal.

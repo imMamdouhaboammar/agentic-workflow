@@ -1,0 +1,26 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to "scope maintenance recommendations" for securing traceability.
+   Updates that stuff implementation details into the PRD body are considered failures.
+② Local Execution Invariant — Maintain local execution premise and tags.
+③ Final Output After Approval — Deliverable is strictly a single revised /prompt/prd.md. workflow.md is prohibited.
+   If there is concern of scope violation, report before making changes.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: "Traceability" reflection completed.
+Current Step: Apply recommended actions and additional research contents to /prompt/prd.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify recommended actions and additional research results from the previous reflection.
+2. Apply to /prompt/prd.md. Do not infringe upon the body scope ("what to build"), but secure traceability via connecting lines (appendix, references, tags).
+
+[Update Quality Verification]
+Layer 1: List only recommended actions that have not been reflected.
+Layer 2: Points where PRD scope is infringed after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. Scope maintenance check.

@@ -1,0 +1,28 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Save ideas without losing options, rationales, and trade-offs.
+② Local Execution Invariant — Local execution suitability tags must be maintained on each idea.
+③ Final Output After Approval — Deliverable is strictly a single /prompt/workflow-idea/workflow-idea.md.
+   workflow.md is prohibited. Do not reduce ideas into "confirmed designs."
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Idea meeting for workflow.md creation completed.
+Current Step: Save meeting results to /prompt/workflow-idea/workflow-idea.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Create /prompt/workflow-idea/ folder (if it does not exist).
+2. Record meeting results into workflow-idea.md.
+   - Each idea: Core / Objective 1 connection / Trade-offs / Local execution suitability / Source (meeting session).
+   - Preserve conflicting and unresolved points.
+   - Definitive conclusions prohibited — subsequent reflection and modification will continue.
+
+[Storage Quality Verification]
+Layer 1: List only meeting ideas that have not been saved.
+Layer 2: Points where structure shakes when subsequent reflection begins.
+Layer 3 (Reverse Audit): What metadata did the storage miss?
+
+[Output]
+A. Saved file path and table of contents. B. Checklist for each idea. C. Storage rules.

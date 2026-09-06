@@ -1,0 +1,50 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of reflection is "finding what is missing."
+   A reflection that concludes only with "it is done well" is considered a failure.
+
+② Local Execution Invariant — If an item is discovered during omission detection that compromises the local execution premise, flag and report it immediately.
+
+③ Final Output After Approval — The output of this turn is strictly the "Missing Points Reflection Report."
+   Do not modify the body of final-research.md in this turn. Modifications will be guided by separate instructions in the next step.
+   Drafting PRD.md is also prohibited. However, if clear gaps are identified during reflection, teammates may conduct additional in-depth research.
+   Include additional research findings in the report, but do not modify the main document.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Round 1 audit and reflection applied to final-research.md completed.
+Current Step: Teammate-based reflection — Detect whether anything is **missing** from final-research.md to perfectly fulfill the user's objective and intent. If gaps are found, conduct additional in-depth teammate research and report.
+Key Reference Files: /prompt/prd-research/final-research.md
+[/SESSION HEADER]
+
+[User Objective & Intent (Reflection Criteria)]
+1) Writing PRD.md for an AI agentic workflow automation system that automatically implements Test Title on the user's local computer.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+2) The user has zero code implementation skills. The goal is an agentic workflow where Claude Code understands user intent and automatically implements everything flawlessly from start to finish.
+
+[Reading Protocol — 4 Stages]
+Stage 1: Focus on essence (What/Why). Grasp only purpose, philosophy, and direction. Do not read as a design tool.
+Stage 2: Associative expansion. Identify system requirements such as service steps, processes, features, and implementation ideas.
+Stage 3: Precision reinforcement of intermediate sections.
+Stage 4: [Reverse Audit] What does this document NOT cover?
+         List items necessary to achieve the user's purpose but absent from the document.
+         This is not reading to confirm what exists, but reading to find what is missing.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Map what exists/does not exist in the document on an item-by-item basis. List discrepancies only.
+Layer 2 (Structure Analysis): What blockers will these missing items create in the actual implementation stage?
+                             (Establish 2 scenarios for starting implementation 6 months later)
+Layer 3 (Philosophy Alignment): Does this gap actually compromise the user's purpose (① automated local implementation ② premise of user without coding skills)? Judge by evidence; "looks good" is prohibited.
+
+[Teammate In-Depth Research Rules (When Gaps are Found)]
+- Target only items identified as "blockers" among gaps found in Stage 4 reading.
+- Follow existing guidelines for teammate formation and execution methods.
+- Include results as a separate section in the report. Modifying the main text (final-research.md) is prohibited.
+
+[Output Format — Reflection Report]
+A. Stage 4 reverse audit reading results — List of missing items.
+B. 3-Layer verdict table (Item / Layer 1 / Layer 2 / Layer 3 / Verdict).
+C. Teammate additional in-depth research results (if any).

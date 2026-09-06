@@ -1,0 +1,40 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of adversarial reflection is discovering defenseless points in Infrastructure Build.
+   Obstinate arguing prohibited. Defenseless points are the core that must be modified.
+
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. SOT integrity. RLM pattern maintained.
+   Pay close attention to points where attacks shake this preservation.
+
+③ Implementation After Approval — Output of this turn is strictly the "Adversarial Reflection Report + Draft Improvement Plan."
+   Modifying the text of /prompt/workflow-coding.md is prohibited. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Multi-round reflections and updates on Infrastructure Build completed (Senior Architect view, English, Hallucination, Defects).
+Current Step: Final reflection — Attack and defense on prd.md using Adversarial Agents A/B/C. Critique incisively.
+Key Reference Files: /prompt/prd.md
+[/SESSION HEADER]
+
+[Adversarial Agent Composition]
+[A — Operational Failure Specialist] SOT contention / Concurrency conflicts / agent-teams coordination breakdown /
+  fork state inconsistency / Recursive loops / Korean translation subagent failure.
+  "Operates, but cannot recover."
+[B — Simplicity Fundamentalist] Overengineering / Excessive layers / Removable components /
+  Missing Python replacement candidates. "Complexity for complexity's sake."
+[C — Maintainer 6 Months Later] Ambiguous documentation / Absent philosophy connections / Missing ADR & code-convention /
+  Points compromising RLM pattern.
+
+[Defense Rules]
+- Attempt defense against all attacks using prd.md documentation evidence.
+- Honestly admit undefendable points = core to modify. Obstinate arguing prohibited.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Attack-defense matrix. List undefendable items only.
+Layer 2 (Structure Analysis): What collapse will defenseless points create in actual execution?
+Layer 3 (Philosophy Alignment): SOT/RLM/philosophy preservation compromise check. Evidence-based.
+
+[Output Format]
+A. Attack, defense, and verdict table per agent. B. Draft improvement plan. C. SOT/RLM preservation re-confirmation.

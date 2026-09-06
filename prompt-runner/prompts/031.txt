@@ -1,0 +1,35 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The criterion for this reflection is alignment with user objectives and intent.
+   A reflection that concludes only with "it is done well" is a failure.
+② Local Execution Invariant — If there are items in the PRD draft that shake the local execution premise, flag them immediately.
+③ Final Output After Approval — The output of this turn is strictly the "Reflection Report." Modifying the text of /prompt/prd.md is prohibited.
+   Modifications will be guided by separate instructions in the next step. Drafting workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Drafting /prompt/prd.md completed.
+Current Step: Teammate-based reflection — Verify alignment with user objectives and intent.
+Key Reference Files: /prompt/prd.md
+[/SESSION HEADER]
+
+[User Objective & Intent (Reflection Criteria)]
+1) AI agentic workflow automation system that automatically implements Test Title on the local computer.
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+2) The user has zero code implementation skills. Claude Code automatically implements everything flawlessly from start to finish.
+
+[Reading Protocol — 4 Stages]
+Stage 1: Focus on essence (What/Why). Grasp purpose, philosophy, and direction. Do not read as a design tool.
+Stage 2: Associative expansion. Grasp requirements including service steps, processes, features, and implementation ideas.
+Stage 3: Precision reinforcement of intermediate sections.
+Stage 4: [Reverse Audit] What does this PRD NOT cover? List items necessary to achieve user objectives but absent.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Map user objectives 1)2) ↔ PRD sections. List discrepancies only.
+Layer 2 (Structure Analysis): When writing workflow.md with this PRD, where will it shake first?
+Layer 3 (Philosophy Alignment): Points where user objectives are actually compromised. Evidence-based judgment.
+
+[Output Format]
+A. User objectives ↔ PRD mapping table. B. Stage 4 reverse audit reading results. C. 3-Layer verdict table.

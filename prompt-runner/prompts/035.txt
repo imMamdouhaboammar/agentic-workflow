@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed recommendations from the Core Objective 1 alignment reflection.
+② Local Execution Invariant — Maintain local execution premise and tags.
+③ Final Output After Approval — Deliverable is strictly a single revised /prompt/prd.md. workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: "Core Objective 1" alignment reflection completed.
+Current Step: Apply recommended actions and additional research contents to /prompt/prd.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify recommended actions and additional research results from the previous reflection.
+2. Apply to /prompt/prd.md so that connection lines between Objective 1 and each requirement are explicit.
+3. Converting "implicit mentions" into "explicit connections" is also included in the update scope.
+
+[Update Quality Verification]
+Layer 1: List only recommended actions that have not been reflected.
+Layer 2: Points where Objective 1 mapping remains broken.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Objective 1 mapping re-confirmation table. C. Checklist.

@@ -1,0 +1,35 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Speed and tokens ignored. Quality and qualitative level is the absolute criterion.
+
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. SOT integrity. RLM pattern maintained.
+
+③ Language Principle — Author internal logic and guidelines (agents/skills/hooks/verification/subagent and skill detailed guidelines) in **English**.
+   User-facing outputs (reports, notifications, questions) are in Korean.
+   Advantages of English prompting: Token efficiency / Accuracy / Interpretative consistency.
+
+④ Implementation After Approval — Deliverable of this turn is strictly the "Reflection Report."
+   Modifications to codebase and documentation are reserved for separate instructions in the next step.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Senior perspective reflection and essential actions integrated.
+Current Step: Codebase exhaustive audit — Re-check compliance with Language Principle.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Verify across all files in the codebase whether Task Management System / agent-teams / Agent Swarm /
+   orchestrator agent / subagents / skills / hooks / commands / task verification and
+   subagent/skill detailed guidelines are authored in English.
+2. Verify whether user-facing output (reports, notifications, questions) is in Korean.
+3. List points of mixing or violation.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Language compliance mapping per file. List violations only.
+Layer 2 (Structure Analysis): What impact will violations have on actual execution quality?
+Layer 3 (Philosophy Alignment): Are there conflicts with SOT/RLM/philosophy preservation?
+
+[Output Format]
+A. Language compliance table per file. B. Violation list + severity. C. Remediation recommendations.

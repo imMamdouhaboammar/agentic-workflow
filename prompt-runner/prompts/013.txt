@@ -1,0 +1,54 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Lossless integration of all research passes is the absolute criterion.
+   Omissions, arbitrary summaries, or lost sources are regarded as quality failures.
+
+② Local Execution Invariant — If options compromising local execution premises are mixed into synthesis,
+   mark and report immediately. LOCAL-* tags must be preserved on all synthesized items.
+
+③ Final Output After Approval — The only permitted deliverable in this turn is final-research.md.
+   Drafting PRD.md is prohibited. Do not prematurely lock in conclusions or recommendations in final-research.md;
+   maintain "options and rationales".
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 1st~4th in-depth research passes saved in /prompt/prd-research.
+Current Step: Generate final-research.md integrating all in-depth research passes → /prompt/prd-research/final-research.md.
+              This file becomes the final research document for PRD production.
+Key Reference Files: /prompt/prd-research/ (1st~4th storage + extension rules)
+Key Review Files: Check whether /prompt/mandatory-decision-rules-sot.md exists; if present, reflect it in prd.md production. If absent, disregard and proceed.
+[/SESSION HEADER]
+
+[Target]
+All in-depth research outputs inside /prompt/prd-research/.
+File to create: /prompt/prd-research/final-research.md
+
+[Task Instructions]
+1. Count and identify all files in /prompt/prd-research/ first.
+   Self-check file list to eliminate any possibility of omission.
+2. Integration principles:
+   - Lossless: Core options, rationales, trade-offs, and counter-examples of every pass and axis must be reflected.
+   - Traceable: Include original file paths as sources for each synthesized item.
+   - Preserve tags: LOCAL-* tags must remain active on all options.
+   - Preserve conflicts: Do not pretend conflicts between passes/axes are resolved; explicitly declare them in 'Conflict' blocks.
+3. Recommended final-research.md skeleton:
+   - 0. Meta: Integration scope, source file list, authoring timestamp.
+   - 1. System Overview (research-based). 2. Synthesis by Axis (General / Tech & Theory / Coding & Impl / External Integration).
+   - 3. Options Matrix (including LOCAL-* tags).
+   - 4. Cross-Axis Conflicts & Unresolved Points. 5. PRD Direction Advice (structural level).
+   - 6. Remaining Gaps (areas requiring additional research).
+
+[Integration Quality Verification — Self-Check Before Completion]
+Layer 1 (Fact Check): Which files in /prompt/prd-research/ were not reflected in the synthesis? List missing files only.
+Layer 2 (Structure Analysis): When using final-research.md as input for PRD production, where does it collapse first?
+                             (e.g., lost sources, concealed conflicts, missing tags, over-determined conclusions)
+Layer 3 (Reverse Audit): What has this synthesis "NOT covered"?
+                        List axes necessary for achieving user goals that were absent from research entirely.
+                        An audit to discover what is missing.
+
+[Output Format — Deliverables for This Turn]
+A. final-research.md table of contents and summary of core blocks.
+B. Count of source files used in integration and reflection status table.
+C. List of cross-axis conflicts and unresolved points.

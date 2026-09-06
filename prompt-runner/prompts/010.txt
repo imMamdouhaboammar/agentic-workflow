@@ -1,0 +1,61 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Depth, breadth, and accuracy of research are absolute criteria.
+   The external integration axis qualifies as quality only when presenting "official documentation evidence + actual integration methods + constraints & limits".
+   Speed, tokens, and convenience can never be justifications.
+
+② Local Execution Invariant — This system operates exclusively on the user's local computer.
+   All external integration options must include [LOCAL-OK / LOCAL-PARTIAL / LOCAL-BLOCKED] tags.
+
+   ★ Additional Fixed Constraint (Dedicated to OpenAI & Gemini Integration):
+     The user already holds OpenAI and Gemini "subscription accounts".
+     Therefore, if OpenAI or Gemini is used, NEVER use API connection methods.
+     Technologies and code must be designed such that "Claude Code CLI connects to and invokes the user's OpenAI/Gemini subscription account from inside the CLI".
+     If options compromising this constraint appear, immediately mark with BLOCKED tag and report.
+
+③ Output After Approval — Writing PRD.md or synthesis documents is prohibited in this turn.
+   Deliverable is strictly "PRD direction advice on external integration axis".
+   Writing even a single line of final deliverables without my approval is prohibited across all subsequent stages.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence. If ② (especially CLI subscription account constraint) is compromised, halt immediately and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 1st (general) + 2nd (tech/theory) + 3rd (coding/impl) in-depth research saved.
+Current Step: 4th in-depth research — conduct specialized research on "External Integration Technology, Documentation, & Implementation Methods".
+              (This is pre-work for Claude Code workflow.md production, setting PRD.md direction. Not drafting PRD.md body.)
+Key Reference Files:
+  - /prompt/External_Integration_DeepDive_PRD_Teammate_Executable.md
+  - /prompt/prd-research/
+[/SESSION HEADER]
+
+[Target]
+System to build: Test Project
+AI agentic workflow automation system that automatically implements this on the user's local computer.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+Focus of this turn: External integration technologies, relevant official documentation, and concrete implementation methods.
+Final deliverable of this turn: "PRD.md production direction advice on external integration axis".
+
+[Task Instructions]
+1. Read /prompt/External_Integration_DeepDive_PRD_Teammate_Executable.md first and strictly follow the teammate guidelines therein.
+2. Form an agent-team (teammates) as instructed to conduct in-depth research on external integration axis.
+   - Depth: For each integration target: (official doc links / auth & permission model / invocation method /
+                                           rate limits & cost / failure handling / local execution suitability).
+   - Breadth: LLM providers (OpenAI, Anthropic, Gemini, local LLMs) / MCP servers /
+             file system, browser, shell integrations / data sources (DB, API, web scraping) /
+             notifications (messengers, email) / auth (OAuth, browser cookies) / other axes required for PRD.
+3. ★ For OpenAI and Gemini, investigate ONLY the "Claude Code CLI → user subscription account connection → invoke within CLI" method.
+   Mark API-key based alternatives as BLOCKED with rationale.
+4. The user has no coding background. Present "what, why, and trade-offs" together for each option.
+
+[Research Quality Verification — Self-Check Before Output]
+Layer 1 (Fact Check): Does findings match external integration scope? Are official doc sources cited?
+Layer 2 (Structure Analysis): When structuring the PRD integration section, where does it collapse first?
+                             (e.g., unreviewed auth models, missing rate limits, misconfigured OpenAI/Gemini integration method)
+Layer 3 (Reverse Audit): What integration axes has this research "NOT covered"? An audit to discover what is missing.
+
+[Output Format — Deliverables for This Turn]
+A. Teammate composition & execution summary.
+B. Per integration target: (official docs / auth / invocation / limits / LOCAL-* / CLI-subscription compliance) findings.
+C. PRD.md production direction advice — how integration axis should be reflected in PRD.

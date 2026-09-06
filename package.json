@@ -1,0 +1,47 @@
+{
+  "name": "agentic-workflow",
+  "version": "1.0.0",
+  "description": "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows",
+  "type": "module",
+  "main": "bin/cli.js",
+  "bin": {
+    "agentic-workflow": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "docs",
+    "SKILL.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    "soul.md",
+    "marketplace.json",
+    "install.sh"
+  ],
+  "scripts": {
+    "start": "bun bin/cli.js",
+    "test": "bun bin/cli.js test",
+    "validate": "bun bin/cli.js validate",
+    "status": "bun bin/cli.js status"
+  },
+  "keywords": [
+    "agentic-workflow",
+    "agent-skill",
+    "skills-sh",
+    "claude-code",
+    "antigravity",
+    "gemini-cli",
+    "cursor",
+    "codex",
+    "opencode",
+    "workflow-automation",
+    "multi-agent-systems",
+    "bun"
+  ],
+  "author": "Mamdouh Aboammar",
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=18.0.0"
+  }
+}

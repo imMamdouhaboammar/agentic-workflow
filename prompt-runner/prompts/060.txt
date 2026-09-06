@@ -1,0 +1,27 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — If unresolved items remain, present evidence-based final recommendations.
+② Local Execution Invariant — Recommendations must use local execution suitability as the primary judgment axis.
+③ Final Output After Approval — Output of this turn is strictly "Final Recommendations per Unresolved Item."
+   If modifications to workflow.md body are unavoidable, report before making changes.
+   Creation/save rules: Use /.claude/skills/workflow-generator, save to /prompt/workflow.md.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Authoring workflow.md blueprint (draft).
+Current Step: Present final recommendations for unresolved items remaining during drafting.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify unresolved items remaining during workflow.md draft authoring.
+2. For each item, present one final recommendation + (Rationale / Objective 1 alignment / Local execution tag / Reason for excluded alternatives).
+3. Present separately by item so that the user can accept or alter.
+
+[Quality Verification]
+Layer 1: Unresolved ↔ Recommendation 1:1 mapping. List unaddressed items only.
+Layer 2: Mutual conflicts among recommendations.
+Layer 3 (Reverse Audit): Missed unresolved axes.
+
+[Output]
+A. List of recommendations. B. Conflict check.

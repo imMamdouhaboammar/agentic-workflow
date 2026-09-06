@@ -1,0 +1,27 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Reflect only recommended actions and additional research results raised during reflection based strictly on evidence.
+② Local Execution Invariant — Even after updates, LOCAL-* tags on all options must be maintained.
+③ Final Output After Approval — The deliverable of this turn is strictly a single revised final-research.md. PRD.md is prohibited.
+   If the update scope is ambiguous, report before making changes.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: "Missing Items" reflection report + additional in-depth research (if any) completed.
+Current Step: Apply recommended actions and additional research contents to /prompt/prd-research/final-research.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify the list of recommended actions and additional research deliverables from the previous reflection report.
+2. Integrate each item into the appropriate blocks of final-research.md.
+   - Maintain sources, maintain LOCAL-* tags, maintain conflicting blocks.
+   - Prohibit overreaching conclusions (leave items pending user decision as 'unresolved').
+
+[Update Quality Verification]
+Layer 1: List only recommended actions / additional research items that have not been reflected.
+Layer 2: Points where source tracking, tags, or conflicting blocks break down in the document after updates.
+Layer 3 (Reverse Audit): Things that the updates untouched and missed. An inspection to find what is absent.
+
+[Output]
+A. Pre/post diff summary. B. Checklist. C. Remaining conflicting / unresolved items.

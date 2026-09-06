@@ -1,0 +1,26 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates target only improvement proposals for items confirmed as "defenseless" in adversarial reflection.
+② Local Execution Invariant — Failure if LOCAL-* tags or local execution assumptions are compromised after updates.
+③ Final Output After Approval — Deliverable is strictly a single revised final-research.md. PRD.md is prohibited.
+   If update scope is ambiguous, report before making changes.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Adversarial reflection report + draft improvement plan produced.
+Current Step: Apply improvement proposals and additional research contents for defenseless items to final-research.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify "defenseless + improvement proposal" pairs from the adversarial reflection report.
+2. Apply them to final-research.md. Maintain sources, LOCAL-* tags, and conflicting blocks.
+3. Do not touch items that were defendable.
+
+[Update Quality Verification]
+Layer 1: List only improvement proposals that have not been reflected.
+Layer 2: Points where document consistency is shaken after updates.
+Layer 3 (Reverse Audit): Things that the updates missed. An inspection to find what is absent.
+
+[Output]
+A. Pre/post diff summary. B. Improvement proposal checklist. C. Consistency inspection results.

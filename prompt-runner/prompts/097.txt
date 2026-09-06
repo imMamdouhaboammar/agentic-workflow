@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to modifications and upgrades "most essential to philosophy, purpose, and core."
+② SOT + RLM Invariant — Preservation check.
+③ Language Principle — Adhere to internal English and user-facing Korean.
+④ Implementation After Approval — Deliverable is selective modifications to codebase and documentation. Arbitrary changes outside approved scope prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Language principle compliance exhaustive audit report.
+Current Step: Selectively apply only items "most essential to philosophy, purpose, and core" among reported violations.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Evaluate list of language violations (Essential / Useful / Rejected).
+2. Apply only "Essential" items to codebase and documentation.
+
+[Update Quality Verification]
+Layer 1: Verdict ↔ Update mapping. List unaddressed essential items only.
+Layer 2: Points where consistency shakes after updates.
+Layer 3 (Reverse Audit): Essential items that selection missed.
+
+[Output]
+A. Verdict table. B. diff summary. C. Hold and rejection list.

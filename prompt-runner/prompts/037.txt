@@ -1,0 +1,40 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The criterion for this reflection is verifying whether "all information, knowledge, technology, code authoring know-how, and implementation know-how necessary for workflow creation" are connectable within the PRD scope.
+   However, this does NOT mean filling implementation details into the PRD body.
+   The PRD must maintain "what to build", while establishing "traceability" showing which know-how in final-research.md each requirement connects to.
+
+② Local Execution Invariant — If there are items where the local execution premise is shaken, flag them immediately.
+
+③ Final Output After Approval — The output of this turn is strictly the "Reflection Report." Modifying the body of /prompt/prd.md is prohibited.
+   workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence. In particular, do not violate the PRD scope of "what to build."
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Core Objective 1 alignment reflection and updates completed.
+Current Step: Teammate-based 3rd reflection — Verify whether the PRD contains "all information, knowledge, technology, code, and implementation know-how" needed for workflow creation in a traceable manner (rather than stuffing the body).
+Key Reference Files: /prompt/prd.md + /prompt/prd-research/final-research.md
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+[/SESSION HEADER]
+
+[User Objective & Intent]
+The user has zero code implementation skills. An agentic workflow automation where Claude Code understands user intent and automatically implements everything flawlessly from start to finish on the local computer.
+
+[Reflection Instructions]
+1. For each requirement in the PRD, attempt a reverse traceability mapping to identify which know-how, technology, or document in final-research.md connects to it.
+2. Classify requirements with broken mapping as "risk of becoming a blocker during implementation."
+3. Without stuffing implementation details into the PRD body, suggest methods to secure traceability (e.g., appendix linkages, reference links, tag systems) as recommendations.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Requirements ↔ final-research.md know-how mapping table. List broken items only.
+Layer 2 (Structure Analysis): What blockers will broken items create when creating workflow.md?
+Layer 3 (Philosophy Alignment): Can connections be made while maintaining the PRD scope of "what to build"?
+                                Recommendations violating scope are considered failures.
+
+[Output Format]
+A. Requirements ↔ final-research.md mapping table.
+B. Broken items / Blocker ratings.
+C. Scope maintenance recommendations (appendix, references, tags, etc.).

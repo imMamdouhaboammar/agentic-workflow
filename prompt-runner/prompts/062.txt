@@ -1,0 +1,42 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — This reflection is a verification of the "accuracy and level" of workflow.md.
+   "Execution feasibility + capability to implement Objective 1" are judgment axes.
+
+② Local Execution Invariant — Verify that local execution feasibility is maintained across all stages.
+
+③ Core Objective 1 Anchored — Never forget Objective 1 throughout the reflection process.
+
+④ Final Output After Approval — Output of this turn is strictly the "Reflection Report."
+   Modifying the text of /prompt/workflow.md is prohibited. Modifications will be guided by separate instructions in the next step.
+   Actual code implementation must NOT begin.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Authoring /prompt/workflow.md blueprint completed.
+Current Step: Teammate-based reflection — Verify accuracy and level of workflow.md.
+Key Reference Files: /prompt/workflow.md
+[/SESSION HEADER]
+
+[★ Core Objective 1]
+Test Goal
+
+[Reading Protocol — 4 Stages]
+Stage 1: Essence (What/Why).
+Stage 2: Associative expansion — stages, processes, features, implementation.
+Stage 3: Precision reinforcement of intermediate sections.
+Stage 4: [Reverse Audit] List things not covered in workflow.md that are necessary for actual execution.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Does each stage possess all inputs, outputs, judgments, and recoveries? List defective items only.
+Layer 2 (Structure Analysis): When Claude Code executes automatically from start to finish with this blueprint,
+                             where does it become unexecutable first? Include re-execution scenario 6 months later.
+Layer 3 (Philosophy Alignment): Does it actually implement Core Objective 1? Evidence-based.
+
+[Output Format]
+A. Defective items per stage (Inputs/Outputs/Judgment/Recovery).
+B. Unexecutable points analysis.
+C. Objective 1 mapping re-confirmation.
+D. Revision recommendations.

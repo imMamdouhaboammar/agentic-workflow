@@ -1,0 +1,26 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates focus primarily on P0/P1 items confirmed in the final reflection.
+② Local Execution Invariant — Maintain LOCAL-* tags and local execution premises.
+③ Final Output After Approval — Deliverable is strictly a single revised final-research.md. PRD.md is prohibited.
+   If update scope is ambiguous, report before making changes.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Final reflection report (4 layers) completed.
+Current Step: Apply recommended actions and additional research contents to /prompt/prd-research/final-research.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify P0/P1 recommended actions and additional research results from the final reflection report.
+2. Apply to final-research.md. Maintain sources, LOCAL-* tags, and conflicting blocks.
+3. Do not touch P2 or lower items and pending items.
+
+[Update Quality Verification]
+Layer 1: List only P0/P1 items that have not been reflected.
+Layer 2: Points where cross-layer consistency is shaken in the document after updates.
+Layer 3 (Reverse Audit): Things that the updates missed. An inspection to find what is absent.
+
+[Output]
+A. Pre/post diff summary. B. P0/P1 checklist. C. Remaining conflicting / unresolved items.

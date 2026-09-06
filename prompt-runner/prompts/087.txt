@@ -1,0 +1,24 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed Fatal and Dangerous items from design defect detection.
+② SOT + RLM Invariant — Preservation check.
+③ Implementation After Approval — Deliverable is strictly a single updated /prompt/workflow-coding.md. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Infrastructure Build design defect detection report completed.
+Current Step: Apply recommended fixes for Fatal and Dangerous defects to /prompt/workflow-coding.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify recommended fixes for Fatal and Dangerous defects.
+2. Apply to /prompt/workflow-coding.md. Preserve SOT/RLM/philosophy.
+
+[Update Quality Verification]
+Layer 1: List only Fatal/Dangerous fixes that have not been reflected.
+Layer 2: Points where consistency or quality standards shake after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. SOT/RLM re-confirmation.

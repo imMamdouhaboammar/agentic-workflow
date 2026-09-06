@@ -1,0 +1,36 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The final reflection is the task of finding "layers that previous reflections missed."
+   Rehashing points that have already been raised is considered a failure.
+
+② Local Execution Invariant — Verify from the final perspective whether any points shake the local execution premise.
+
+③ Final Output After Approval — The output of this turn is strictly the "Final Reflection Report."
+   Modifying the text of final-research.md is prohibited (modifications will be guided by separate instructions in the next step).
+   PRD.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Audit → Missing reflection → Unnecessary reflection → Adversarial reflection all completed.
+Current Step: Final reflection — Re-examine final-research.md from angles not covered by previous layers.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+Key Reference Files: /prompt/prd-research/final-research.md
+[/SESSION HEADER]
+
+[Reflection Instructions]
+Previous reflections covered (update completeness / omissions / unnecessary items / adversarial attacks).
+For this final reflection, use "your ultimate reflection weapon, your unique reflection know-how."
+Overlapping with previous reflections is considered a failure. Reflect in whatever way you determine to be most effective.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): List only factual issues discovered in each layer. No interpretation.
+Layer 2 (Structure Analysis): What blockers will these issues create in the PRD creation stage?
+Layer 3 (Philosophy Alignment): Does it actually compromise user objectives? Evidence-based.
+
+[Output Format]
+A. Discovered items by layer.
+B. 3-Layer verdict table.
+C. Improvement priorities (P0/P1/P2).

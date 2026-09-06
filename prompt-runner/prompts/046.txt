@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed recommended actions from reflection.
+② Local Execution Invariant — Maintain local execution premise and tags.
+③ Final Output After Approval — Deliverable is strictly a single revised /prompt/workflow-idea/workflow-idea.md.
+   workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: workflow-idea.md reflection (user objectives & Objective 1) report completed.
+Current Step: Apply recommended actions to /prompt/workflow-idea/workflow-idea.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify confirmed recommended actions from previous reflection.
+2. Apply to workflow-idea.md. Maintain Objective 1 connection, local execution tags, and conflicting blocks.
+
+[Update Quality Verification]
+Layer 1: List only recommended actions that have not been reflected.
+Layer 2: Points where consistency is shaken after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. Re-confirmation of Objective 1 mapping.

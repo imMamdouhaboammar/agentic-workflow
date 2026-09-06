@@ -1,0 +1,39 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The purpose of adversarial reflection is discovering defenseless points in workflow.md.
+   In particular, strongly attack whether "all matters requested to date have been flawlessly integrated."
+② Local Execution Invariant — Do not miss points during attacks that shake the local execution premise.
+③ Final Output After Approval — Output is strictly the "Adversarial Reflection Report + Draft Improvement Plan."
+   Modifying the body of /prompt/workflow.md is prohibited. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: workflow.md reflection completeness review and revision completed.
+Current Step: Reflection based on Adversarial Agents A/B/C → Defenseless points + improvement plan.
+Key Reference Files: /prompt/workflow.md
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+[/SESSION HEADER]
+
+[Adversarial Agent Composition]
+[A — Operational Failure Specialist] Local resource exhaustion / Concurrency conflicts / SOT inconsistency /
+  Subscription CLI disconnects / Recursive loops / Agent unresponsiveness. "Operates, but cannot recover."
+[B — Simplicity Fundamentalist] Overengineering / Removable stages / Excessive abstraction.
+[C — Maintainer 6 Months Later] Ambiguous stages / Absent Objective 1 connection / Loss of sources.
+
+[Additional Attack Vector — workflow-idea.md Reflection Completeness]
+Attack workflow.md with critical thinking based on the contents of workflow-idea.md.
+Strongly attack whether all matters requested have been flawlessly integrated. Critique incisively.
+
+[Defense Rules]
+- Defend against all attacks using workflow.md evidence. Honestly admit undefendable points = core to modify.
+- Obstinate arguing prohibited.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Attack-defense matrix. List undefendable items only.
+Layer 2 (Structure Analysis): What blockers will vulnerabilities create in actual execution?
+Layer 3 (Philosophy Alignment): Objective 1 compromise check. Evidence-based.
+
+[Output Format]
+A. Attack, defense, and verdict per agent. B. Cumulative requirement reflection audit. C. Draft improvement plan.

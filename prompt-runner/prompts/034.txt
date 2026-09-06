@@ -1,0 +1,39 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — The criterion for this reflection is alignment with "Core Objective 1."
+   Items not connected to Objective 1 are considered waste in the PRD.
+
+② Local Execution Invariant — If there are items in the PRD draft where the local execution premise is shaken, flag them immediately.
+
+③ Core Objective 1 Anchored — Never forget Objective 1 throughout conversations, reflections, and judgments.
+
+④ Final Output After Approval — Output is strictly the "Reflection Report." Modifying the body of /prompt/prd.md is prohibited.
+   Modifications will be guided by separate instructions in the next step. workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: PRD Round 1 reflection and updates completed.
+Current Step: Teammate-based 2nd reflection — Verify alignment with "Core Objective 1."
+Key Reference Files: /prompt/prd.md
+[/SESSION HEADER]
+
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+
+[Reflection Instructions]
+Verify whether this Core Objective 1 is anchored as the "absolute goal" across every stage and every feature in /prompt/prd.md.
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Map how each section and requirement of the PRD connects to Objective 1.
+                      List only disconnected items.
+Layer 2 (Structure Analysis): When the PRD is input into workflow.md creation based on Objective 1,
+                             where are the points where Objective 1 becomes diluted?
+Layer 3 (Philosophy Alignment): Does Objective 1 actually govern the entire PRD?
+                                "Implicit mentions" are not recognized as governance. Only explicit connections count.
+
+[Output Format]
+A. Core Objective 1 ↔ PRD sections mapping table.
+B. Disconnected items / Dilution points / Sections missing Objective 1.
+C. 3-Layer verdict + modification recommendations.

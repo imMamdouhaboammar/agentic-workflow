@@ -1,0 +1,50 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Depth, breadth, and accuracy of research are the absolute criteria. Speed, tokens, and convenience can never be justifications.
+
+② Local Execution Invariant — This system operates exclusively on the user's local computer.
+   SaaS, cloud hosting, or remote execution premises are not permitted in any form.
+   If options compromising this premise arise during research, advice, or structural proposals, halt immediately and report first.
+
+③ Output After Approval — Writing PRD.md is prohibited in this turn. Output only "PRD.md direction advice".
+   Writing even a single line of final deliverables without my approval is prohibited across all subsequent stages.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence. If ② is compromised, halt execution of ①③ and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: None — This work is the "pre-research for PRD.md creation" stage prior to workflow.md production.
+Current Step: Execute teammate in-depth research → Output PRD.md direction advice (not drafting PRD.md body).
+Key Reference Files: /prompt/prd_teammate_executable.md (teammate composition & execution guidelines)
+[/SESSION HEADER]
+
+[Target]
+System to build: Test Project
+AI agentic workflow automation system that automatically implements this on the user's local computer.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+Final deliverable of this turn: "Direction advice for writing an outstanding PRD.md" (not PRD.md body).
+
+[Task Instructions]
+1. Read /prompt/prd_teammate_executable.md first and strictly follow the teammate composition and execution guidelines therein.
+2. Form an agent-team (teammates) as instructed and conduct in-depth research.
+   - Depth: Not superficial facts, but down to structures, options, and trade-offs.
+   - Breadth: Local execution architecture / agent orchestration / auto-triggers /
+             local LLMs vs external API options / permissions & security / failure recovery / observability, etc.,
+             covering all required axes for PRD direction without omissions.
+3. Premise: The user has no idea how to build this system.
+   Therefore, research must present "options + rationales + trade-offs" together.
+   Merely announcing conclusions is prohibited.
+
+[Research Quality Verification — Self-Check Before Output]
+Layer 1 (Fact Check): Does teammate findings match the requested research scope? List discrepancies only.
+Layer 2 (Structure Analysis): When defining PRD direction using these research results, where does the structure collapse first?
+Layer 3 (Reverse Audit): What has this research "NOT covered"?
+                        List missing axes necessary for determining PRD direction.
+                        This is an audit to discover what is missing, not a check of what exists.
+
+[Output Format — Deliverables for This Turn]
+A. Teammate composition & execution summary — who took which axis and what was investigated.
+B. In-depth research core findings — centered on options, rationales, and trade-offs.
+C. PRD.md production direction advice — which sections to structure with what perspectives to make an outstanding PRD.
+   (※ Do not write PRD.md body. Advice on skeleton and perspectives only.)

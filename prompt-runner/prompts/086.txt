@@ -1,0 +1,37 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Speed and tokens completely ignored. Quality and qualitative level is the absolute criterion.
+   Selection criterion between subagents vs agent-teams is quality. SOT must actually function.
+
+② SOT + RLM Invariant — Philosophy, purpose, and core preserved. SOT integrity. RLM pattern maintained.
+
+③ Implementation After Approval — Output of this turn is strictly the "Design Defect Detection Report."
+   Modifying the text of /prompt/workflow-coding.md is prohibited. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Hallucination risk reflection and updates completed.
+Current Step: Exhaustive inspection of Infrastructure Build — Re-investigate design defects (design gaps).
+              Treat as highest-difficulty task that could cause critical problems if failed.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Exhaustively detect candidate "design defects" across all components of Infrastructure Build:
+   - Missing requirements ↔ design mapping.
+   - Undefined failure scenarios.
+   - SOT access contention / data inconsistency risks.
+   - Teammate coordination collapse / missing fallback.
+   - Potential violations of quality standard (quality, not speed).
+   - Non-compliance with English/translation principles.
+   - Missing Python replacement candidates.
+2. Evaluate severity for each defect (Fatal / Dangerous / Minor).
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Was exhaustive inspection completed? List uninspected areas only.
+Layer 2 (Structure Analysis): What collapse will fatal defects cause in actual execution?
+Layer 3 (Philosophy Alignment): SOT/RLM/philosophy preservation violation check. Evidence-based.
+
+[Output Format]
+A. Defect list + severity. B. Collapse scenarios for fatal defects. C. Recommended remediation directions.

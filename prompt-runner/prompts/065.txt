@@ -1,0 +1,31 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — This reflection verifies whether workflow.md has flawlessly integrated all matters from workflow-idea.md.
+   Concluding "perfect" without evidence is prohibited.
+② Local Execution Invariant — Verify that the local execution premise is maintained.
+③ Core Objective 1 Anchored — Never forget Objective 1 throughout the conversation.
+④ Final Output After Approval — Output is strictly the "Reflection Report." Modifying the text of /prompt/workflow.md is prohibited.
+   Actual code implementation is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: workflow.md draft accuracy and level reflection and updates completed.
+Current Step: workflow-idea.md ↔ workflow.md reflection completeness audit.
+Key Reference Files:
+  - /prompt/workflow.md (audit target)
+  - /prompt/workflow-idea/workflow-idea.md (audit baseline)
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify each idea in workflow-idea.md.
+2. Map to which stage or feature of workflow.md it has been integrated into.
+3. Classify as [Complete / Partial / Omitted / Distorted].
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Reflection mapping table. List unmapped ideas only.
+Layer 2 (Structure Analysis): What blockers will omissions and distortions create in actual workflow execution?
+Layer 3 (Philosophy Alignment): Does it compromise Objective 1? Evidence-based.
+
+[Output Format]
+A. Mapping table. B. Omission and distortion list. C. Flawless reflection verdict.

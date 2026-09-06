@@ -1,0 +1,28 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates do not apply every item from the reflection report,
+   but selectively apply only "modifications and upgrades most essential to workflow philosophy, purpose, and core."
+② SOT + RLM Invariant — Preservation check.
+③ Implementation After Approval — Deliverables are codebase modifications and, if necessary, updating /prompt/workflow-coding.md.
+   Arbitrary changes outside the approved scope are prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Senior Architect perspective codebase exhaustive audit reflection report.
+Current Step: Selectively apply only items "most essential to philosophy, purpose, and core" among report recommendations.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify the list of recommended actions from the reflection report.
+2. Evaluate each action by "contribution to philosophy, purpose, and core" (Essential / Useful / Irrelevant).
+3. Selectively apply only "Essential" items. Place "Useful" on the hold list, and reject "Irrelevant".
+4. Apply selected essential items to codebase + update /prompt/workflow-coding.md if necessary.
+
+[Update Quality Verification]
+Layer 1: Selection criteria ↔ Verdict table. List unevaluated actions only.
+Layer 2: Points where consistency shakes after applying essential actions.
+Layer 3 (Reverse Audit): Philosophy contribution items that the selection missed.
+
+[Output]
+A. Verdict table (Essential / Useful / Rejected). B. Update diff summary. C. Hold list.

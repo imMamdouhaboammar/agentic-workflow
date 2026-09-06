@@ -1,0 +1,30 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — This reflection is an exhaustive audit of "flawless reflection of all matters requested to date."
+   Sampling prohibited. Concluding "perfect" without evidence is prohibited.
+② Local Execution Invariant — If there are items that shake the local execution premise, flag them immediately.
+③ Final Output After Approval — Output is strictly the "Audit Report." Modifying the text of workflow-idea.md is prohibited.
+   Modifications will be guided by separate instructions in the next step. workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Multi-round reflections and updates on workflow-idea.md completed.
+Current Step: Final audit — Exhaustive check on reflection status of all requirements issued so far.
+Key Reference Files: /prompt/workflow-idea/workflow-idea.md
+[★ Core Objective 1 — Fixed as absolute goal across all stages and features]
+Test Goal
+[/SESSION HEADER]
+
+[Task Instructions]
+1. List all requirements and recommended actions issued in this project so far (to the extent identifiable).
+2. For each requirement item, map reflection status within current workflow-idea.md — [Complete / Partial / Omitted / Distorted].
+3. List omitted and distorted items with cited evidence.
+
+[Audit Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Number of requirement items / Distribution of reflection. List unmapped requirements only.
+Layer 2 (Structure Analysis): What blockers will omissions and distortions create in workflow.md creation?
+Layer 3 (Reverse Audit): What is this audit itself missing (e.g., points where conclusions not in the original were created)?
+
+[Output Format]
+A. Requirements ↔ Reflection mapping table. B. Omission and distortion list. C. Flawless reflection verdict (evidence-based).

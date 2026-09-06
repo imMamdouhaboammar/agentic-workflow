@@ -1,0 +1,63 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Depth, breadth, and accuracy of research are absolute criteria.
+   Especially for the technology & theory axis, "options, rationales, limitations, counter-examples" must be secured to qualify as quality.
+   Speed, tokens, and convenience can never be justifications.
+
+② Local Execution Invariant — This system operates exclusively on the user's local computer.
+   If options compromising local execution appear (mandatory cloud dependencies, SaaS-only SDKs, remote-execution-dependent models/services), mark and report immediately.
+   Explicitly tag all options with local execution feasibility.
+
+③ Output After Approval — Writing PRD.md or synthesis documents is prohibited in this turn.
+   Deliverable is strictly "PRD direction advice on technology & theory axis".
+   Writing even a single line of final deliverables without my approval is prohibited across all subsequent stages.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence. If ② is compromised, halt execution of ①③ and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 1st in-depth research (general) + /prompt/prd-research storage & extension rules established.
+Current Step: 2nd in-depth research — conduct specialized research on "Technology & Theory Axis" → Output PRD direction advice.
+              (Not drafting PRD.md body. Saving will proceed under separate instructions after this turn.)
+Key Reference Files:
+  - /prompt/Technology_Development_DeepDive_PRD_Teammate_Executable.md (teammate composition & execution guidelines)
+  - /prompt/prd-research/ (extension rules exist, target for subsequent storage)
+[/SESSION HEADER]
+
+[Target]
+System to build: Test Project
+AI agentic workflow automation system that automatically implements this on the user's local computer.
+[★ Core Objective 1 — Absolute Goal]
+Test Goal
+Focus of this turn: In-depth research on "Technology + Theory" related to this system — securing materials to determine PRD direction.
+Final deliverable of this turn: "PRD.md production direction advice on technology & theory axis" (not PRD.md body).
+
+[Task Instructions]
+1. Read /prompt/Technology_Development_DeepDive_PRD_Teammate_Executable.md first and strictly follow the teammate guidelines therein.
+2. Form an agent-team (teammates) as instructed to conduct in-depth research on the "Technology & Theory Axis".
+   - Depth: Prohibit superficial term listing.
+           For each technology & theory: (Operating principles → Prerequisites → Trade-offs → Limitations → Counter-examples).
+   - Breadth: Agent orchestration theory / local LLM & inference stack / tool calling & function calling paradigms /
+             planning & reflection algorithms / memory & state management / automated triggers & scheduling /
+             sandboxing & permission models / failure recovery & observability / evaluation & benchmarking methodologies,
+             covering all necessary technology/theory axes for PRD direction without omission.
+3. Premise: The user does not know how to build this system.
+   Therefore, present "what it is + why it is a candidate + what must be compromised" for each option.
+   Announcing conclusions only is prohibited.
+4. Local execution feasibility tagging: Explicitly tag every option with [LOCAL-OK / LOCAL-PARTIAL / LOCAL-BLOCKED].
+   For LOCAL-BLOCKED items, a one-line rationale for exclusion is mandatory.
+
+[Research Quality Verification — Self-Check Before Output]
+Layer 1 (Fact Check): Does teammate findings match the "Technology & Theory Axis" scope? List discrepancies only.
+Layer 2 (Structure Analysis): When structuring the PRD technical section using these findings, where does it collapse first?
+                             (e.g., unverified compatibility among options, missing prerequisites, absence of local tags)
+Layer 3 (Reverse Audit): What has this research "NOT covered"?
+                        List items missing from technology/theory axis needed for PRD direction.
+                        An audit to discover what is missing, not what exists.
+
+[Output Format — Deliverables for This Turn]
+A. Teammate composition & execution summary — who took which tech/theory axis and what was investigated.
+B. In-depth research core findings — structured per technology/theory by
+   (operating principles / prerequisites / trade-offs / limitations / counter-examples / local execution tag).
+C. PRD.md production direction advice — which sections of PRD should reflect tech/theory axis with what perspectives.
+   (※ Do not write PRD.md body. Advice on skeleton and perspectives only.)

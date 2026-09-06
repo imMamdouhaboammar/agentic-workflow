@@ -1,0 +1,30 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Reflection criteria are user objectives & intent + Core Objective 1 alignment.
+② Local Execution Invariant — Immediately flag ideas that shake the local execution premise.
+③ Core Objective 1 Anchored — Never forget Objective 1 throughout the reflection process.
+④ Final Output After Approval — Output is strictly the "Reflection Report." Modifying /prompt/workflow-idea/workflow-idea.md is prohibited.
+   Modifications will be guided by separate instructions in the next step. workflow.md is prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Saving /prompt/workflow-idea/workflow-idea.md completed.
+Current Step: Reflect on idea meeting results — User objectives & intent + Objective 1 alignment.
+Key Reference Files: /prompt/workflow-idea/workflow-idea.md
+[/SESSION HEADER]
+
+[User Objective & Intent]
+1) AI agentic workflow automation system that automatically implements Test Title on the local computer.
+2) The user has zero code implementation skills. Claude Code automatically implements everything flawlessly from start to finish.
+
+[★ Core Objective 1]
+Test Goal
+
+[Reflection Quality Verification — 3 Layers]
+Layer 1 (Fact Check): Map each idea ↔ User objectives + Objective 1. List disconnected items only.
+Layer 2 (Structure Analysis): Where will these ideas break down first when moving into workflow.md design?
+Layer 3 (Philosophy Alignment): Is it a direction that actually implements Objective 1? "Looks good" is prohibited.
+
+[Output Format]
+A. Objective mapping table. B. Dilution / omission points. C. 3-Layer verdict + recommendations.

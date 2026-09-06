@@ -1,0 +1,49 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Clarity, reusability, and traceability of storage structure are absolute criteria.
+   Speed and convenience can never be justifications.
+
+② Local Execution Invariant — This system operates exclusively on the user's local computer.
+   If options compromising local execution premises are mixed within research results, mark and report immediately.
+
+③ Final Output After Approval — The only permitted deliverable in this turn is "research result storage files".
+   Drafting final deliverables such as PRD.md, synthesis documents, or summary conclusions is prohibited.
+   If storage structure (folder, filename, metadata) is ambiguous, report to me before creating.
+   Upon approval request: implementation intent (1 sentence) + affected files + risk points + assumptions.
+
+→ In case of conflict, higher-tier criteria take absolute precedence. If ② is compromised, halt execution of ①③ and report.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: 1st teammate in-depth research completed — PRD.md direction advice generated.
+Current Step: Save 1st research results into /prompt/prd-research folder.
+              Structure so that subsequent in-depth research passes can be synthesized.
+Key Reference Files: /prompt/prd-research/ (newly created)
+[/SESSION HEADER]
+
+[Target]
+All teammate in-depth research findings conducted so far.
+Storage location: /prompt/prd-research/ (create if folder does not exist)
+
+[Task Instructions]
+1. Create /prompt/prd-research/ folder.
+2. Save 1st in-depth research results following these principles:
+   - Extensibility premise: N additional research passes will accumulate here. Design naming and structure accordingly.
+   - Separation by axis: Single monolithic file prohibited. Separate files by teammate and research axis so they can be recombined at synthesis stage.
+   - Metadata mandatory: In each file include — research pass / research axis / teammate identity /
+                         timestamp / original question / evidence sources.
+   - Separate raw and summary: Store refined summaries and raw outputs separately to allow revisiting original text during synthesis.
+3. Storage structure itself determines difficulty of next steps (additional research + synthesis).
+   This task is not "stacking files", but "pre-organizing for synthesis".
+
+[Storage Quality Verification — Self-Check Before Completion]
+Layer 1 (Fact Check): Were all outputs of 1st research saved? List missing items only.
+Layer 2 (Structure Analysis): When 2~5 additional research passes accumulate, where does the current structure break first?
+                             (e.g., overlapping axes, naming collisions, missing metadata)
+Layer 3 (Reverse Audit): What information needed in the synthesis stage is currently not being saved?
+                         (e.g., research context, raw questions, indeterminate items, discarded options)
+                         An audit to discover what is missing, not what exists.
+
+[Output Format — Deliverables for This Turn]
+A. Created folder/file structure (tree format).
+B. One-line description of each file's role.
+C. Extension rules — formalized rules on where and with what naming new research should be saved.

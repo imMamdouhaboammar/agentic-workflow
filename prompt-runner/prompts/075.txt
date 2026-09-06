@@ -1,0 +1,25 @@
+[ABSOLUTE ANCHOR]
+① Quality Absolute Priority — Updates are limited to confirmed recommended actions from the previous proposal.
+② SOT + RLM Invariant — Adding English operation + Korean translation subagent must not compromise SOT/RLM.
+③ Local Execution Invariant — Maintain tags and premises.
+④ Implementation After Approval — Deliverable is strictly a single updated /prompt/workflow-coding.md. Actual implementation prohibited.
+   When requesting approval: Implementation intent (1 sentence) + Affected files + Risk points + Assumptions.
+→ In case of conflict, higher criteria take absolute precedence.
+[/ABSOLUTE ANCHOR]
+
+[SESSION HEADER]
+Previous Step: Additional absolute principles (English operation + Korean translation subagent) design proposal completed.
+Current Step: Apply confirmed recommended actions to /prompt/workflow-coding.md.
+[/SESSION HEADER]
+
+[Task Instructions]
+1. Identify confirmed recommended actions from previous proposal.
+2. Apply to /prompt/workflow-coding.md. Preserve SOT/RLM/philosophy, maintain local execution.
+
+[Update Quality Verification]
+Layer 1: List only recommended actions that have not been reflected.
+Layer 2: Points where document consistency is shaken after updates.
+Layer 3 (Reverse Audit): Things that the updates missed.
+
+[Output]
+A. diff summary. B. Checklist. C. SOT/RLM preservation re-confirmation.

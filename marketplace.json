@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-plugin-manifest.json",
+  "name": "agentic-workflow",
+  "displayName": "Agentic Workflow",
+  "version": "1.0.0",
+  "description": "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows",
+  "author": {
+    "name": "Mamdouh Aboammar"
+  },
+  "homepage": "https://skills.sh/agentic-workflow",
+  "license": "MIT",
+  "categories": [
+    "automation",
+    "developer-tools",
+    "agent-tools",
+    "orchestration"
+  ],
+  "compatibility": {
+    "claudeCode": ">=1.0.0",
+    "claudeDesktop": ">=1.0.0",
+    "cursor": ">=0.40.0",
+    "codex": ">=0.1.0",
+    "opencode": ">=1.0.0",
+    "antigravity": ">=1.0.0"
+  },
+  "entrypoint": "SKILL.md",
+  "bin": {
+    "agentic-workflow": "./bin/cli.js"
+  }
+}
