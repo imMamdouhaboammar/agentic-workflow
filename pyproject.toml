@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agenticworkflow"
+version = "1.2.0"
+description = "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Mamdouh Aboammar" }
+]
+keywords = [
+    "agentic-workflow",
+    "agent-skill",
+    "skills-sh",
+    "claude-code",
+    "antigravity",
+    "gemini-cli",
+    "cursor",
+    "codex",
+    "opencode",
+    "workflow-automation",
+    "multi-agent-systems",
+    "autonomous-agents"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+    "pyyaml>=6.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/imMamdouhaboammar/agentic-workflow"
+Repository = "https://github.com/imMamdouhaboammar/agentic-workflow.git"
+Issues = "https://github.com/imMamdouhaboammar/agentic-workflow/issues"
+
+[project.scripts]
+agentic-workflow = "agentic_workflow.cli:main"
+agentic-workflow-py = "agentic_workflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "agentic_workflow*"]
+exclude = ["tests*", "autopilot-logs*", "pacs-logs*", "review-logs*", "verification-logs*", "diagnosis-logs*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.json", "*.toon", "*.md"]

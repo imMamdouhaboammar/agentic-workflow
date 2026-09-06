@@ -24,9 +24,13 @@ translations/*
 # Setup Hook logs — runtime diagnostics (regenerated on each run)
 .claude/hooks/*.log
 
-# Distribution archives — not tracked
+# Distribution archives & build artifacts
 *.zip
 *.tar.gz
+*.tgz
+*.egg-info/
+dist/
+build/
 *.backup.*
 
 # Node / Bun
@@ -39,3 +43,17 @@ pnpm-lock.yaml
 # Security
 .env*
 !*.example
+
+# System engine runtime records
+.notifications.json
+.announcements_seen.json
+.update_history.json
+.migration_history.json
+ledger.jsonl
+.fable/
+
+# Local installation targets (installed by AutoInstaller / test suites)
+.gemini/config/skills/
+.claude/skills/agentic-workflow/
+.cursor/skills/
+

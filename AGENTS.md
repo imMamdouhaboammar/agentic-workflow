@@ -33,6 +33,7 @@ AgenticWorkflow is a **parent organism that gives birth to child agentic workflo
 | Adversarial Review | `@reviewer` + `@fact-checker` Generator-Critic pattern |
 | Decision Log | Recording the rationale for auto-approval decisions |
 | Context Preservation | Cross-session memory preservation + Knowledge Archive + RLM pattern |
+| TOON Protocol | Token-Oriented Object Notation (v4.1) — 30-60% token reduction across all agent dialogues & deliverables |
 
 > Inheritance is not optional — it is **structural**. The child does not "reference" the parent's DNA, it **embeds** it. Details: `soul.md §0`.
 
@@ -1143,6 +1144,115 @@ Deterministic shortcut paths that skip LLM diagnosis:
 | Fast-Path applies | Skip LLM diagnosis — decide immediately with only P1 pre-evidence |
 
 > **Design decision**: Abductive Diagnosis is an additional layer that does not change the existing 4-layer QA. Diagnosis results are recorded only in `diagnosis-logs/` and SOT is not modified. They are archived to the Knowledge Archive as `diagnosis_patterns`, enabling cross-session learning.
+
+### 5.7 TOON Protocol (Token-Oriented Object Notation & Density Enforcement)
+
+> **All agents, workflows, subagents, and tools in this system MUST enforce the TOON (Token-Oriented Object Notation v4.1) style for all structured data exchange, dialogue turns, task payloads, deliverables, and tabular summaries.**
+
+Reference Specification: [TOON Specification v4.1 (toon-format/spec)](https://github.com/toon-format/spec)
+
+#### 1. Core Motivation & 30-60% Token Savings
+Standard JSON and verbose markdown tables consume excessive tokens due to repeated field keys, curly braces, quotes, and whitespace padding. TOON achieves **30% to 60% token reduction** while preserving the full JSON data model, lossless round-trip decoding, and clean human readability.
+
+#### 2. Structural Formatting Rules
+1. **Uniform Object Arrays (Tabular Form §9.3)**:
+   When transmitting lists of objects sharing the same fields, declare the field list once in the header, followed by delimiter-separated rows:
+   ```toon
+   users[2]{id,name,role}:
+     1,Ada,admin
+     2,Bob,user
+   ```
+2. **Primitive Arrays (Inline Form §9.1)**:
+   Emit primitive sequences on a single header line:
+   ```toon
+   tags[3]: research,benchmark,evaluation
+   ```
+3. **Uniform Mappings (Keyed Tabular Form §9.5)**:
+   Objects whose values share a uniform shape declare keys per row:
+   ```toon
+   services[2:]{port,status}:
+     web: 8080,healthy
+     db: 5432,healthy
+   ```
+4. **Hierarchical & Nested Objects (§8)**:
+   Use 2-space indentation instead of braces; strings are quoted only when required (§7).
+
+#### 3. Agent Communication & Deliverable Contracts
+- **Verification Logs & Quality Gate Reports**:
+  ```toon
+  verdict: PASS
+  pacs_score: 92
+  dimensions[3]{dimension,score,evidence}:
+    faithfulness,95,"Aligned 100% with spec v4.1"
+    completeness,90,"All edge cases and delimiters handled"
+    logic,92,"Deterministic round-trip parity"
+  ```
+- **Inter-Agent Task Payloads**:
+  All subagents, teammates, and orchestrators exchange structured outputs via TOON.
+- **Native Runtime Adapters**:
+  - Python: `core/engine_py/toon_adapter.py` (`encode_toon`, `decode_toon`, `format_conversation_turns`)
+  - TypeScript/Bun: `src/engine_ts/toon-adapter.ts` (powered by `@toon-format/toon`)
+
+### 5.8 Supportive Tools Ecosystem & Sequential Operational Lifecycle Director
+
+> **The workflow runtime automatically provisions supportive tools upon installation and directs their operation sequentially across every phase. The user never needs to manually decide when or how to invoke each supportive integration.**
+
+#### 1. The 4 Foundation Supportive Tools
+
+| Tool / Framework | Role & Categorization | Designated Lifecycle Phase |
+|---|---|---|
+| **Ponytail** (`DietrichGebert/ponytail`) | **Simplicity Governor & Anti-Bloat**<br>Enforces the lazy senior dev ladder (fewest files, shortest working diff, deletion over addition). | **Planning & Implementation** (Rung 1-3 in planning; Rung 4-7 in implementation; Anti-debt audit in verification) |
+| **TOON** (`toon-format/toon`) | **Token-Oriented Object Notation (v4.1)**<br>High-density tabular serialization saving 30-60% tokens. | **Continuous Protocol** across all data exchanges, deliverables, and state archives |
+| **Fable** (`imMamdouhaboammar/get-fable`) | **Autonomous Lifecycle Harness & Continuation**<br>Circuit breaker protection, multi-pass verification, and durable state handoffs (`.fable/state.json`). | **Harness & Continuation** (Circuit breaker during implementation; 3-pass verification; handoff compaction) |
+| **Caveman** (`JuliusBrussee/caveman`) | **Terse Communication Mode**<br>Cuts output tokens by 65-75% by eliminating pleasantries and conversational filler while preserving exact code and errors. | **Continuous Protocol** across agent thoughts, logs, and subagent coordination |
+
+#### 2. The Sequential Operational Lifecycle
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                  AGENTIC WORKFLOW OPERATIONAL LIFECYCLE                     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ CONTINUOUS PROTOCOL LAYER (Always Active):                                  │
+│  • TOON Protocol (v4.1): Dense structured data, logs, & inter-agent state   │
+│  • Caveman Mode: Ultra-terse, zero-slop agent dialogues & telemetry logs    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 1: RESEARCH & DISCOVERY                                               │
+│  • Skills Mesh Auto-Discovery: Resolve matching skills, tools & playbooks   │
+│  • Fable Discover & Context Packets: Ground requirements in ground truth    │
+│  • Output in TOON format to conserve context window for later phases        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 2: ARCHITECTURE & PLANNING                                            │
+│  • Ponytail Ladder (Rung 1-3): YAGNI check, stdlib-first, question whether  │
+│    speculative scaffolding needs to exist. Strips over-engineering early!   │
+│  • Fable Plan: Formulates verifiable plan with explicit success criteria    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 3: PRODUCTION IMPLEMENTATION                                          │
+│  • Ponytail Implementation (Rung 4-7): Shortest working diff, fewest files, │
+│    boring over clever, root-cause fix over symptom patches                  │
+│  • Fable Circuit Breaker: Tracks failure streaks, halts if streak >= 2      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 4: VERIFICATION & CLEAN CODE GUARD                                    │
+│  • L0 Anti-Skip + L1 Verification + L1.5 pACS + L2 Review                   │
+│  • Ponytail Audit: Audits code for over-engineering debt & bloat            │
+│  • Fable Multi-Pass Verification (Unit, Integration, Security/Taste)        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ PHASE 5: HANDOFF & CONTINUATION STATE                                       │
+│  • Fable Handoff: Compacts state into .fable/state.json & PROGRESS.md        │
+│  • TOON Serialization of run summary and audit ledger                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### 3. Automatic Provisioning & Dynamic Extensibility
+- **Automated Provisioning**: Running `./install.sh` or `agentic-workflow init` automatically verifies and provisions all supportive tools across `~/.claude`, `~/.gemini`, `~/.codex`, and `~/.agents`.
+- **Extensible Registry (`integrations.json`)**: Sibling tools can be added dynamically at any time without modifying core code:
+  ```bash
+  agentic-workflow integrations add <github-repo-url>
+  ```
+- **Lifecycle Director Inspection**:
+  ```bash
+  agentic-workflow integrations status
+  agentic-workflow integrations phase <planning|implementation|verification|handoff>
+  ```
 
 ---
 

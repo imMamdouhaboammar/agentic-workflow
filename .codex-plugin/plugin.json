@@ -1,0 +1,13 @@
+{
+  "name": "agentic-workflow",
+  "version": "1.2.0",
+  "description": "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows",
+  "skills": "./skills",
+  "interface": {
+    "defaultPrompt": [
+      "Run autonomous agentic workflow in autopilot mode",
+      "Design a verified 3-stage agent pipeline",
+      "Execute quality gate verification with pACS"
+    ]
+  }
+}

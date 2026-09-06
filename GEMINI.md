@@ -56,6 +56,27 @@ Every workflow consists of three stages:
 | Terminology Protocol | Maintains terminology consistency via `translations/glossary.yaml`. Deterministic validation guarantees glossary freshness and integrity. See `AGENTS.md §5.2`. |
 | Predictive Debugging (L-1) | Pre-tool warning on risky files based on error history. `predictive_debug_guard.py` (PreToolUse warning) + `aggregate_risk_scores()` (SessionStart P1 aggregation) + `validate_risk_scores()` (RS1-RS6 validation). Cached in `risk-scores.json`. |
 | Abductive Diagnosis | 3-step structured diagnosis triggered on quality gate failure before retry: Step A: P1 evidence gathering (`diagnose_context.py`), Step B: Multi-hypothesis root cause analysis, Step C: P1 post-validation (`validate_diagnosis.py` AD1-AD10). Recorded in `diagnosis-logs/`. See `AGENTS.md §5.6`. |
+| TOON Protocol (v4.1) | Mandatory Token-Oriented Object Notation for structured outputs, dialogues, logs, and agent payloads. Saves 30-60% tokens. Dual engine adapters (`core/engine_py/toon_adapter.py`, `src/engine_ts/toon-adapter.ts`). See `AGENTS.md §5.7`. |
+| Supportive Tools & Lifecycle Director | Automated provisioning & sequential execution of Ponytail, TOON, Fable, and Caveman without manual user burden. Managed by `LifecycleDirector` and `IntegrationInstaller`. See `AGENTS.md §5.8`. |
+
+## Sequential Operational Lifecycle & Supportive Tools
+
+In every Gemini CLI / Antigravity session, the agent operates under the automated guidance of the **Sequential Operational Lifecycle Director**:
+1. **Continuous Layer**: Enforce **TOON v4.1** for structured data tables/state and **Caveman** mode (terse, zero-slop prose) for internal logs and agent dialogue.
+2. **Phase 2 (Architecture & Planning)**: Enforce **Ponytail YAGNI Ladder** (Rung 1-3: question speculative requirements, stdlib-first, reuse existing patterns) before finalizing any plan.
+3. **Phase 3 (Production Implementation)**: Enforce **Ponytail Surgical Diffs** (Rung 4-7: fewest files, shortest diff, root cause fix) + **Fable Circuit Breaker** (halt if failure streak >= 2).
+4. **Phase 4 (Verification)**: Clean Code Guard + Ponytail Anti-Debt audit + L0-L2 quality gates.
+5. **Phase 5 (Handoff)**: Compact session into durable continuation state (`.fable/state.json`, `.fable/PROGRESS.md`).
+
+## TOON Response & Conversation Invariant
+
+When working within this system, Gemini CLI / Antigravity MUST emit structured information (lists, tables, benchmarks, telemetry, status reports) formatted in **TOON v4.1** syntax instead of verbose JSON or markdown tables to maximize context headroom.
+
+```toon
+tasks[2]{id,agent,status}:
+  1,researcher,completed
+  2,engineer,in_progress
+```
 
 ## Context Preservation
 

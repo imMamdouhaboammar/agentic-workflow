@@ -31,6 +31,9 @@ AgenticWorkflow is a **parent organism that gives birth to child agentic workflo
 ### Priority Among Absolute Criteria
 > **Absolute Criterion 1 (Quality) is paramount.** Absolute Criterion 2 (SOT) and Absolute Criterion 3 (CCP) are co-equal means to guarantee quality.
 
+### TOON Style Enforcement (v4.1)
+> **All agents and Claude sessions MUST enforce TOON (Token-Oriented Object Notation v4.1) on structured responses, dialogues, and deliverables**, achieving 30–60% token savings over JSON/markdown tables. Reference: `AGENTS.md §5.7`.
+
 ---
 
 ## Project Structure
@@ -146,6 +149,17 @@ Autonomous execution mode that auto-approves `(human)` review stages and questio
 Activated whenever `ulw` is present in the prompt. Acts as an **intensity overlay on rigor**. Orthogonal to Autopilot. 3 Intensifiers: I-1 (Sisyphus Persistence), I-2 (Mandatory Task Decomposition), I-3 (Bounded Retry Escalation).
 
 **Details**: `docs/protocols/ulw-mode.md`.
+
+## Supportive Tools Ecosystem & Sequential Operational Lifecycle
+
+The system automatically provisions and orchestrates supportive tools:
+- **Continuous Layer**: **TOON v4.1** for structured data exchange and **Caveman** mode for concise, zero-slop agent reasoning and logs.
+- **Phase 2 (Architecture & Planning)**: **Ponytail YAGNI Ladder** (Rung 1-3: question speculative code, stdlib-first, reuse existing patterns) + **Fable Plan**.
+- **Phase 3 (Implementation)**: **Ponytail Surgical Diffs** (Rung 4-7: fewest files, shortest diff, root cause fix) + **Fable Circuit Breaker** (halt if failure streak >= 2).
+- **Phase 4 (Verification)**: Clean Code Guard + Ponytail Anti-Debt audit + L0-L2 quality gates.
+- **Phase 5 (Handoff)**: Compact session into durable continuation state (`.fable/state.json`, `.fable/PROGRESS.md`).
+
+Details: `AGENTS.md §5.8`.
 
 ## Language and Style Rules
 

@@ -1,0 +1,20 @@
+---
+description: Universal Agentic Workflow rules and autonomous engine constraints
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# AgenticWorkflow Rules for Cursor
+
+You are operating inside an **AgenticWorkflow** governed codebase.
+
+## 3 Absolute Criteria (Canon)
+1. **Absolute Criterion 1: Quality of the Final Deliverable** — Speed, token cost, and length limits are completely ignored. The sole criterion is deliverable quality.
+2. **Absolute Criterion 2: Single-File SOT + Hierarchical Memory** — All shared state lives exclusively in `state.yaml`. Only the Orchestrator writes to SOT.
+3. **Absolute Criterion 3: Code Change Protocol (CCP)** — Always perform: Step 1 (Understand Intent) → Step 2 (Ripple Effect Analysis) → Step 3 (Change Plan) before editing code.
+
+## Autonomous Toolchain Integration
+- Test Suite: `bun bin/cli.js test`
+- Clean Code Guard: `bun bin/cli.js guard .`
+- Autopilot Engine: `bun bin/cli.js autopilot --title "<Title>" --goal "<Goal>"`
+- TOON Protocol: Encode structured outputs with TOON v4.1 for context efficiency.

@@ -1,0 +1,27 @@
+workflow:
+  title: DAG Test
+  goal: Verify OmniSkill DAG Planning
+  trace_id: auto_1788696567_b418f7
+  current_step: 1
+  total_steps: 2
+  autopilot:
+    enabled: true
+    status: RUNNING
+  energy_budget:
+    remaining_pct: 100.0
+    refuel_count: 0
+steps:
+- step: 1
+  name: Custom Intelligence Step
+  stage: research
+  deliverable: docs/custom_research.md
+  role: researcher
+  completed: false
+  verdict: PENDING
+- step: 2
+  name: Custom Execution Step
+  stage: implementation
+  deliverable: docs/custom_impl.md
+  role: engineer
+  completed: false
+  verdict: PENDING

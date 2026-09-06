@@ -1,29 +1,59 @@
 {
-  "name": "agentic-workflow",
-  "version": "1.1.0",
+  "name": "@mamdouh-aboammar/agentic-workflow",
+  "version": "1.2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows",
   "type": "module",
   "main": "bin/cli.js",
+  "module": "src/index.ts",
+  "types": "src/index.d.ts",
   "bin": {
-    "agentic-workflow": "./bin/cli.js"
+    "agentic-workflow": "bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.ts",
+      "default": "./bin/cli.js"
+    },
+    "./engine": "./src/engine_ts/runner.ts",
+    "./hooks": "./src/hooks/dispatcher.ts",
+    "./integrations": "./src/integrations/index.ts",
+    "./toon": "./src/engine_ts/toon-adapter.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imMamdouhaboammar/agentic-workflow.git"
+  },
+  "homepage": "https://github.com/imMamdouhaboammar/agentic-workflow#readme",
+  "bugs": {
+    "url": "https://github.com/imMamdouhaboammar/agentic-workflow/issues"
   },
   "files": [
     "bin",
     "core",
+    "src",
     "docs",
+    "skills",
+    ".codex-plugin",
+    ".claude-plugin",
     "SKILL.md",
     "AGENTS.md",
     "CLAUDE.md",
     "GEMINI.md",
     "soul.md",
     "marketplace.json",
+    ".skills.json",
     "install.sh"
   ],
   "scripts": {
     "start": "bun bin/cli.js",
     "test": "bun bin/cli.js test",
     "validate": "bun bin/cli.js validate",
-    "status": "bun bin/cli.js status"
+    "status": "bun bin/cli.js status",
+    "prepack": "find . -name '__pycache__' -type d -prune -exec rm -rf {} + 2>/dev/null || true"
   },
   "keywords": [
     "agentic-workflow",
@@ -44,5 +74,8 @@
   "engines": {
     "bun": ">=1.0.0",
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@toon-format/toon": "^4.1.1"
   }
 }

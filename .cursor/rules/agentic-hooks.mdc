@@ -1,0 +1,27 @@
+---
+description: Universal Agentic Hooks & Policy Governance Rule
+globs: *
+alwaysApply: true
+---
+
+# Universal Agentic Hooks Framework (UAHF) — Cursor Governance Rule
+
+All agent actions, terminal commands, tool executions, and file edits within Cursor must strictly adhere to the project's governance policies:
+
+1. **Destructive Command Ban**:
+   - Never execute destructive git operations (`git push --force`, `git push -f`, `git reset --hard`, `git checkout .`, `git clean -f`, `git branch -D`).
+   - Never execute catastrophic deletions (`rm -rf /`, `rm -rf ~`, `rm -rf $HOME`).
+   - Never execute raw disk writes (`dd if=`) or filesystem formatting (`mkfs`).
+   - Never pipe unverified remote scripts to a shell (`curl | sh`, `wget | bash`).
+
+2. **Package & Container Governance**:
+   - **Never install or use Colima** under any circumstances (prohibited per project constitution due to large footprint).
+   - Never execute `sudo brew`.
+
+3. **Secrets & Sensitive Files**:
+   - Never commit or print secrets, tokens, or API keys (`sk-*`, `AKIA*`, `ghp_*`).
+   - Do not overwrite or tamper with `.env`, private keys (`id_rsa`, `*.pem`), or credentials files.
+
+4. **TDD Integrity & Single Source of Truth**:
+   - If `.tdd-guard` is active, test files cannot be modified; implement the required logic in source code.
+   - SOT state is managed via `state.yaml`.

@@ -523,10 +523,10 @@ def snapshot_project_files(project_dir: Path = None) -> dict:
                 try:
                     stat = item.stat()
                     snapshot[str(item.relative_to(project_dir))] = (stat.st_size, stat.st_mtime)
-                except (OSError, ValueError):
-                    pass
-    except Exception:
-        pass
+                except (OSError, ValueError) as e:
+                    log.debug(f"Snapshot stat error on {item}: {e}")
+    except Exception as e:
+        log.debug(f"Snapshot directory traversal error: {e}")
     
     return snapshot
 
@@ -752,8 +752,8 @@ def _save_completion_report(step: int, logs_dir: Path) -> None:
 
                 except json.JSONDecodeError:
                     continue
-        except Exception:
-            pass
+        except Exception as e:
+            log.debug(f"Stream parsing error: {e}")
         combined = "".join(parts)
 
     # Fallback to .log file if stream.jsonl is missing or empty
@@ -891,8 +891,8 @@ def run_single_prompt(
                 log.warning(f"[{step:03d}]   → Terminating process forcibly and retrying")
                 try:
                     proc.kill()
-                except Exception:
-                    pass
+                except Exception as e:
+                    log.debug(f"Process termination error: {e}")
                 break
             
             time.sleep(1)
@@ -1057,8 +1057,8 @@ def run_single_prompt(
                             log.info(f"[{step:03d}] Sent auto-response (2nd pass): 1 (Yes)")
                             text_f.write(auto_msg + '\n')
                             text_f.flush()
-                        except Exception:
-                            pass
+                        except Exception as e:
+                            log.debug(f"Auto-response write error: {e}")
                 
                 # Clear timer line
                 print(f"\r{' ' * 80}\r", end='', flush=True)
@@ -1103,9 +1103,9 @@ def run_single_prompt(
                         proc.stdin.flush()
                         proc.stdin.close()  # Send EOF — if not closed, Claude Code deadlocks waiting for EOF
                 except BrokenPipeError:
-                    pass
-                except Exception:
-                    pass
+                    log.debug("Stdin pipe closed prematurely")
+                except Exception as e:
+                    log.debug(f"Stdin write error: {e}")
             
             t_stdin = threading.Thread(target=write_stdin, daemon=True)
             

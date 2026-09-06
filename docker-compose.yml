@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  agentic-workflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/immamdouhaboammar/agentic-workflow:latest
+    container_name: agentic-workflow
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/workspace
+      - ./.traces:/workspace/.traces
+    command: ["status"]

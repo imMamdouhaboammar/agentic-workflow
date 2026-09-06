@@ -8,7 +8,12 @@ on:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    name: Multi-Platform Test & Validation (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,18 +23,38 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Verify CLI Help
+      - name: Verify CLI Execution
         run: |
           bun ./bin/cli.js --help
+          bun ./bin/cli.js --version
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install Python Dependencies
+      - name: Install Python Dependencies & Build Tools
         run: |
-          pip install pyyaml
+          python3 -m pip install --upgrade pip
+          pip install pyyaml setuptools wheel
+
+      - name: Verify Python Package Install & Import
+        run: |
+          pip install -e .
+          python3 -c "import agentic_workflow; print('AgenticWorkflow import OK:', agentic_workflow.__version__)"
+          python3 -m agentic_workflow.cli --help
+
+      - name: Verify Skills.sh & Plugin Manifests
+        run: |
+          python3 -c "
+          import json
+          s = json.load(open('.skills.json'))
+          assert s['name'] == 'agentic-workflow', 'Invalid name in .skills.json'
+          assert 'repository' in s, 'Missing repository in .skills.json'
+          m = json.load(open('marketplace.json'))
+          assert m['name'] == 'agentic-workflow', 'Invalid name in marketplace.json'
+          print('✅ All multi-agent distribution manifests verified!')
+          "
 
       - name: Run Clean Code Guard Audit
         run: |
@@ -46,10 +71,10 @@ jobs:
           hangul = re.compile(r'[\uac00-\ud7a3\u1100-\u11ff\u3130-\u318f\ua960-\ua97f\ud7b0-\ud7ff]')
           violations = []
           for root, dirs, files in os.walk('.'):
-              if '.git' in root or 'node_modules' in root:
+              if any(x in root for x in ['.git', 'node_modules', 'dist', 'build', '.traces', '.fable']):
                   continue
               for f in files:
-                  if f.endswith('.pdf') or f.endswith('.png') or f.endswith('.jpg') or f.endswith('.pyc'):
+                  if any(f.endswith(ext) for ext in ['.pdf', '.png', '.jpg', '.pyc', '.tar.gz', '.whl', '.zip', '.tgz', '.lock']):
                       continue
                   p = os.path.join(root, f)
                   try:

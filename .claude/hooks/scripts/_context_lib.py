@@ -643,10 +643,17 @@ def validate_sot_schema(ap_state):
             f"SOT schema: outputs is {type(outputs).__name__}, expected dict"
         )
 
-    # S3: outputs keys — must follow step-N or step-N-ko format
+    # S3: outputs keys — must follow step-N, step-N-ko, or task_* (engine runtime) format
     if isinstance(outputs, dict):
         for key in outputs:
-            if not isinstance(key, str) or not key.startswith("step-"):
+            if not isinstance(key, str):
+                warnings.append(f"SOT schema: invalid output key '{key}'")
+                continue
+            # Accept engine runtime format (task_id keys from agentic engines)
+            if key.startswith("task_"):
+                continue
+            # Accept workflow-generator format: step-N or step-N-ko
+            if not key.startswith("step-"):
                 warnings.append(f"SOT schema: invalid output key '{key}'")
                 continue
             # Extract step number — allow step-N and step-N-ko (translation)

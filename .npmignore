@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.log
+.traces/
+autopilot-logs/
+diagnosis-logs/
+pacs-logs/
+review-logs/
+verification-logs/
+.claude/context-snapshots/
+.fable/
+dist/
+*.tgz
+*.zip
+*.tar.gz

@@ -1,0 +1,10 @@
+{
+  "name": "agentic-workflow",
+  "version": "1.2.0",
+  "description": "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows",
+  "author": {
+    "name": "Mamdouh Aboammar"
+  },
+  "homepage": "https://skills.sh/agentic-workflow",
+  "repository": "https://github.com/imMamdouhaboammar/agentic-workflow"
+}

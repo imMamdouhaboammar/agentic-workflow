@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "description": "Declarative registry of supportive tools, frameworks, and agentic skills for AgenticWorkflow",
+  "integrations": [
+    {
+      "id": "ponytail",
+      "name": "Ponytail",
+      "repo": "https://github.com/DietrichGebert/ponytail",
+      "description": "Anti-overengineering and YAGNI simplicity governor. Enforces the lazy senior dev ladder (fewest files, shortest working diff, deletion over addition).",
+      "category": "simplicity_governor",
+      "lifecycle_phases": [
+        "planning",
+        "implementation",
+        "verification"
+      ],
+      "install": {
+        "strategy": "skill",
+        "repo_slug": "DietrichGebert/ponytail",
+        "skill_names": ["ponytail", "ponytail-audit", "ponytail-debt"],
+        "fallback_git": "https://github.com/DietrichGebert/ponytail.git"
+      },
+      "detection": {
+        "skill_dirs": [
+          ".gemini/config/skills/ponytail",
+          ".claude/skills/ponytail",
+          ".agents/skills/ponytail"
+        ]
+      },
+      "directives": {
+        "planning": "Enforce Ponytail Ladder (Rung 1-3): Question whether every proposed component needs to exist (YAGNI). Reuse existing patterns and stdlib before introducing new abstractions or scaffolding. Reject premature architectural complexity.",
+        "implementation": "Enforce Ponytail Ladder (Rung 4-7): Shortest working diff wins. Minimum code that works. No unrequested abstractions, no single-impl interfaces, no boilerplate for later. Fix root causes, not symptoms.",
+        "verification": "Run Ponytail anti-debt check: Audit code changes for unnecessary helpers, dead config, or accidental complexity. Ensure diff is surgical."
+      }
+    },
+    {
+      "id": "toon",
+      "name": "TOON (Token-Oriented Object Notation)",
+      "repo": "https://github.com/toon-format/toon",
+      "description": "Official TOON v4.1 tabular serialization format. Reduces token usage by 30-60% across all structured deliverables, inter-agent data exchanges, and state logs.",
+      "category": "notation_protocol",
+      "lifecycle_phases": [
+        "continuous",
+        "research",
+        "planning",
+        "implementation",
+        "verification",
+        "handoff"
+      ],
+      "install": {
+        "strategy": "package",
+        "bun_package": "@toon-format/toon@^4.1.1",
+        "python_module": "core.engine_py.toon_adapter"
+      },
+      "detection": {
+        "npm_package": "@toon-format/toon",
+        "python_module": "core.engine_py.toon_adapter"
+      },
+      "directives": {
+        "continuous": "Emit all structured datasets, task lists, and telemetry in TOON v4.1 format instead of raw JSON or Markdown tables to conserve 30-60% tokens.",
+        "handoff": "Serialize final session summaries, audit ledgers, and state snapshots in high-density TOON format."
+      }
+    },
+    {
+      "id": "fable",
+      "name": "Fable (get-fable)",
+      "repo": "https://github.com/imMamdouhaboammar/get-fable",
+      "description": "Autonomous engineering lifecycle harness, Fable circuit breaker, multi-pass verification, and durable continuation handoffs.",
+      "category": "lifecycle_harness",
+      "lifecycle_phases": [
+        "research",
+        "planning",
+        "implementation",
+        "verification",
+        "handoff"
+      ],
+      "install": {
+        "strategy": "hybrid",
+        "repo_slug": "imMamdouhaboammar/get-fable",
+        "skill_names": ["get-fable", "fable-plan", "fable-tdd", "fable-verify", "fable-handoff"],
+        "script_url": "https://raw.githubusercontent.com/imMamdouhaboammar/get-fable/main/install.sh",
+        "fallback_git": "https://github.com/imMamdouhaboammar/get-fable.git"
+      },
+      "detection": {
+        "skill_dirs": [
+          ".gemini/config/skills/fable-handoff",
+          ".gemini/config/skills/get-fable",
+          ".claude/skills/fable-handoff",
+          ".agents/skills/get-fable"
+        ],
+        "state_dir": ".fable"
+      },
+      "directives": {
+        "planning": "Structure phase deliverables into verifiable contracts with unambiguous success criteria and pre-conditions.",
+        "implementation": "Arm Fable Circuit Breaker: Monitor consecutive execution failures. If failure streak >= 2, halt speculative edits and trigger root-cause diagnosis.",
+        "verification": "Execute 3-Pass Verification: Pass 1 (Unit functionality), Pass 2 (Integration & Ripple effects), Pass 3 (AppSec, Clean Code & Taste).",
+        "handoff": "Generate durable continuation state into .fable/state.json and .fable/PROGRESS.md with explicit next-action pointers."
+      }
+    },
+    {
+      "id": "caveman",
+      "name": "Caveman",
+      "repo": "https://github.com/JuliusBrussee/caveman",
+      "description": "Ultra-terse token compression mode. Cuts output tokens by 65-75% by eliminating pleasantries and prose fluff while keeping technical code, paths, and errors byte-exact.",
+      "category": "terse_comm",
+      "lifecycle_phases": [
+        "continuous",
+        "inter_agent",
+        "reporting"
+      ],
+      "install": {
+        "strategy": "skill",
+        "repo_slug": "JuliusBrussee/caveman",
+        "skill_names": ["caveman"],
+        "script_url": "https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh",
+        "fallback_git": "https://github.com/JuliusBrussee/caveman.git"
+      },
+      "detection": {
+        "skill_dirs": [
+          ".claude/skills/caveman",
+          ".agents/skills/caveman",
+          ".gemini/config/skills/caveman"
+        ]
+      },
+      "directives": {
+        "continuous": "Drop articles, conversational filler, and hedging in agent logs and intermediate thought. Deliver technical facts, code, and errors verbatim without prose bloat.",
+        "inter_agent": "When subagents exchange task status or internal handoffs, use dense Caveman phrasing: `[component] [action] [status]. [next_action].`"
+      }
+    },
+    {
+      "id": "omni-skill",
+      "name": "OmniSkill",
+      "repo": "https://github.com/imMamdouhaboammar/omni-skill",
+      "description": "Dynamic agentic router and master compiler for high-reliability agent skills across ChatGPT, Codex, Claude Code, Google Antigravity, and Cursor.",
+      "category": "skill_engine",
+      "lifecycle_phases": [
+        "planning",
+        "implementation",
+        "verification",
+        "porting",
+        "distribution"
+      ],
+      "install": {
+        "strategy": "skill",
+        "repo_slug": "imMamdouhaboammar/omni-skill",
+        "skill_names": ["omni-skill", "skill-conductor", "skill-architect", "skill-portability-compiler", "skill-evaluator"],
+        "fallback_git": "https://github.com/imMamdouhaboammar/omni-skill.git"
+      },
+      "detection": {
+        "skill_dirs": [
+          ".gemini/config/skills/omni-skill",
+          ".claude/skills/omni-skill",
+          ".agents/skills/omni-skill"
+        ]
+      },
+      "directives": {
+        "planning": "Enforce OmniSkill Dynamic Router & SkillSpec Compilation: Decompose user intent into an optimal multi-step execution DAG (Research -> Planning -> Implementation -> Verification) and validate provider-neutral SkillSpec contracts before authoring.",
+        "implementation": "Enforce OmniSkill Progressive Disclosure & Host Contracts: Maintain strict separation between router frontmatter (<=1024 chars), core SKILL.md, references/, and deterministic scripts/. Respect host capabilities (Antigravity, Claude, Cursor, Codex) without inventing mock tools.",
+        "verification": "Enforce OmniSkill 4-Layer Validation & BinEval Gates: Verify Layer 1 (Artifact validity), Layer 2 (Discovery trigger/negative precision), Layer 3 (Observable behavior assertions), and Layer 4 (Portability across target host runtimes)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "agentic-workflow",
+  "purpose": "Autonomous design, orchestration, validation, and execution of multi-step AI agent workflows across Research, Planning, and Implementation",
+  "baseline_failure": "Without guidance, AI agents produce incomplete plans, skip physical deliverable creation, mutate shared state concurrently, perform untested speculative edits, and fail to enforce deterministic quality gates across heterogeneous hosts",
+  "triggers": {
+    "positive": [
+      "build an autonomous pipeline",
+      "design agent workflow",
+      "execute in autopilot",
+      "run ulw mode",
+      "setup quality gates",
+      "run workflow",
+      "execute pipeline",
+      "start step"
+    ],
+    "negative": [
+      "format this json file",
+      "tell me a joke",
+      "write a simple one-line bash script",
+      "fix this single typo in README"
+    ]
+  },
+  "outputs": [
+    "SOT state.yaml with step-by-step progress",
+    "Stage deliverables verified on disk (L0-L2 quality gates)",
+    "pACS self-confidence delta evaluation log",
+    "Audit trace records in .traces and ledger"
+  ],
+  "invariants": [
+    "Absolute Criterion 1: Quality of the final deliverable strictly overrides speed and token costs",
+    "Absolute Criterion 2: Single-file SOT (state.yaml) with single-writer permission model",
+    "Absolute Criterion 3: Code Change Protocol (CCP) with 4 Coding Anchor Points (CAP-1~4)",
+    "Zero unexecuted assertions or fake mock approvals"
+  ],
+  "workflow": [
+    {
+      "action": "Research & intelligence gathering with domain expertise delegation",
+      "why": "Prevents building upon flawed or noisy requirements",
+      "freedom": "medium"
+    },
+    {
+      "action": "Architecture and verifiable plan formulation in SOT state.yaml",
+      "why": "Prevents architectural divergence and state desynchronization",
+      "freedom": "low"
+    },
+    {
+      "action": "Production implementation with surgical diffs and circuit breaker monitoring",
+      "why": "Prevents speculative thrashing and scope bloat",
+      "freedom": "low"
+    },
+    {
+      "action": "4-layer quality gate verification (L0 Anti-Skip, L1 Semantic Gate, L1.5 pACS, L2 Adversarial Review)",
+      "why": "Guarantees 100% functional goal achievement and deliverable integrity",
+      "freedom": "low"
+    }
+  ],
+  "tools": [
+    "read",
+    "write",
+    "patch",
+    "search",
+    "grep",
+    "shell",
+    "python"
+  ],
+  "resources": [
+    "state.yaml",
+    "core/autopilot_engine.py",
+    "core/engine_py/runner.py",
+    "src/engine_ts/runner.ts"
+  ],
+  "host_targets": [
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "chatgpt",
+    "antigravity",
+    "cursor"
+  ],
+  "evals": [
+    {
+      "name": "autopilot-pipeline-generation",
+      "prompt": "Design and execute an autonomous 3-stage pipeline for user onboarding",
+      "should_trigger": true,
+      "expected": [
+        "state.yaml initialized with 3 stages",
+        "L0 anti-skip verification passes for all deliverables",
+        "pACS score >= 70 recorded"
+      ]
+    },
+    {
+      "name": "negative-simple-edit",
+      "prompt": "Fix a spelling error in line 4 of index.html",
+      "should_trigger": false,
+      "expected": [
+        "Performs direct one-off edit without launching multi-agent workflow pipeline"
+      ]
+    }
+  ]
+}

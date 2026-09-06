@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgenticWorkflowDefinition",
+  "description": "Schema for event-driven, durable Agentic Workflows with DNA inheritance",
+  "type": "object",
+  "required": ["name", "version", "stages"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique identifier for the workflow"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version string, e.g. 1.0.0"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable purpose of the workflow"
+    },
+    "input_parameters": {
+      "type": "object",
+      "description": "Default input schema and values"
+    },
+    "timeout_seconds": {
+      "type": "integer",
+      "default": 3600,
+      "description": "Workflow-level timeout in seconds"
+    },
+    "failure_workflow": {
+      "type": "string",
+      "description": "Name of saga compensation workflow to trigger upon failure"
+    },
+    "stages": {
+      "type": "array",
+      "description": "Ordered execution stages (Research -> Planning -> Implementation)",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "tasks"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "stage_type": {
+            "type": "string",
+            "enum": ["research", "planning", "implementation", "verification", "custom"]
+          },
+          "tasks": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/TaskDefinition" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TaskDefinition": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": [
+            "system.code",
+            "system.wait",
+            "system.switch",
+            "system.fork_join",
+            "system.sub_workflow",
+            "system.transform",
+            "agent.task",
+            "agent.human",
+            "agent.review",
+            "agent.diagnosis"
+          ]
+        },
+        "description": { "type": "string" },
+        "role": {
+          "type": "string",
+          "enum": [
+            "orchestrator",
+            "researcher",
+            "architect",
+            "engineer",
+            "reviewer",
+            "fact_checker",
+            "clean_code_guard",
+            "recovery"
+          ]
+        },
+        "deliverable_path": {
+          "type": "string",
+          "description": "Target output path for L0 Anti-Skip gate verification"
+        },
+        "criteria": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Functional acceptance criteria for L1 verification"
+        },
+        "input_parameters": { "type": "object" },
+        "retry_policy": {
+          "type": "object",
+          "properties": {
+            "max_retries": { "type": "integer", "default": 3 },
+            "delay_seconds": { "type": "number", "default": 2.0 },
+            "backoff_rate": { "type": "string", "enum": ["FIXED", "LINEAR", "EXPONENTIAL"], "default": "EXPONENTIAL" }
+          }
+        },
+        "timeout_seconds": { "type": "integer", "default": 300 },
+        "circuit_breaker": {
+          "type": "object",
+          "properties": {
+            "failure_threshold": { "type": "integer", "default": 2 },
+            "cooldown_seconds": { "type": "number", "default": 30.0 }
+          }
+        },
+        "compensation_task": {
+          "type": "string",
+          "description": "Task ID to execute if this task fails irrecoverably"
+        },
+        "branches": {
+          "type": "object",
+          "description": "Condition branches for switch tasks or fork/join branches"
+        }
+      }
+    }
+  }
+}

@@ -66,6 +66,7 @@ REQUIRED_SCRIPTS = [
     "validate_translation.py",
     "validate_verification.py",
     "validate_workflow.py",
+    "retry_manager.py",
 ]
 
 # Severity levels

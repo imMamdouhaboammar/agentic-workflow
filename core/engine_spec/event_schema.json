@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgenticEngineEventEnvelope",
+  "description": "Schema for event-driven engine messages and append-only ledger entries",
+  "type": "object",
+  "required": ["event_id", "event_type", "timestamp", "trace_id", "workflow_id"],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Globally unique event identifier (ULID or UUIDv4)"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "workflow.started",
+        "workflow.paused",
+        "workflow.resumed",
+        "workflow.completed",
+        "workflow.failed",
+        "workflow.cancelled",
+        "stage.transitioned",
+        "task.scheduled",
+        "task.polled",
+        "task.heartbeat",
+        "task.progress",
+        "task.gate_evaluating",
+        "task.gate_passed",
+        "task.gate_failed",
+        "task.diagnosing",
+        "task.completed",
+        "task.failed",
+        "task.retrying",
+        "circuit_breaker.tripped",
+        "circuit_breaker.recovered",
+        "energy.refueled",
+        "signal.received"
+      ]
+    },
+    "timestamp": {
+      "type": "number",
+      "description": "Epoch timestamp in milliseconds"
+    },
+    "trace_id": {
+      "type": "string",
+      "description": "Distributed tracing correlation identifier"
+    },
+    "workflow_id": {
+      "type": "string",
+      "description": "ID of workflow execution instance"
+    },
+    "stage_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "worker_id": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "description": "Event-specific data payload"
+    }
+  }
+}

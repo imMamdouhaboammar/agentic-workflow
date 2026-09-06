@@ -1,8 +1,9 @@
 {
   "$schema": "https://skills.sh/schema.json",
   "name": "agentic-workflow",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Pluripotent stem-cell framework and universal agentic toolchain for autonomous workflows",
+  "repository": "https://github.com/imMamdouhaboammar/agentic-workflow",
   "author": "Mamdouh Aboammar",
   "license": "MIT",
   "skill": "SKILL.md",
@@ -11,6 +12,8 @@
     "workflow-engine",
     "multi-agent",
     "automation",
-    "developer-tools"
+    "developer-tools",
+    "skills-sh",
+    "omni-skill"
   ]
 }
