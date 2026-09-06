@@ -22,9 +22,9 @@ export class IntegrationInstaller {
   private homeDir: string;
   private targetSkillDirs: string[];
 
-  constructor(projectDir: string = '.') {
+  constructor(projectDir: string = '.', homeDir?: string) {
     this.projectDir = path.resolve(projectDir);
-    this.homeDir = os.homedir();
+    this.homeDir = homeDir ? path.resolve(homeDir) : os.homedir();
     this.targetSkillDirs = [
       path.join(this.homeDir, '.gemini', 'config', 'skills'),
       path.join(this.homeDir, '.claude', 'skills'),

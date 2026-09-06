@@ -37,9 +37,9 @@ class InstallationStatus:
 class IntegrationInstaller:
     """Provisions and verifies external supportive tools across agent environments."""
 
-    def __init__(self, project_dir: str = "."):
+    def __init__(self, project_dir: str = ".", home_dir: Optional[str] = None):
         self.project_dir = os.path.abspath(project_dir)
-        self.home_dir = os.path.expanduser("~")
+        self.home_dir = os.path.abspath(home_dir) if home_dir else os.path.expanduser("~")
         self.target_skill_dirs = [
             os.path.join(self.home_dir, ".gemini", "config", "skills"),
             os.path.join(self.home_dir, ".claude", "skills"),

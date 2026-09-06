@@ -41,17 +41,29 @@ describe("TypeScript / Bun Integrations Subsystem", () => {
   });
 
   it("checks installer status and confirms foundation integrations are online", () => {
-    const installer = new IntegrationInstaller(projectDir);
-    const statuses = installer.checkAll();
+    const tempHome = fs.mkdtempSync(path.join(os.tmpdir(), "installer-test-ts-"));
+    try {
+      const skillsDir = path.join(tempHome, ".gemini", "config", "skills");
+      for (const sname of ["ponytail", "caveman", "omni-skill"]) {
+        const sDir = path.join(skillsDir, sname);
+        fs.mkdirSync(sDir, { recursive: true });
+        fs.writeFileSync(path.join(sDir, "SKILL.md"), `# ${sname}`);
+      }
 
-    expect(statuses.length).toBe(5);
-    const map = new Map(statuses.map(s => [s.id, s]));
+      const installer = new IntegrationInstaller(projectDir, tempHome);
+      const statuses = installer.checkAll();
 
-    expect(map.get("ponytail")?.installed).toBe(true);
-    expect(map.get("toon")?.installed).toBe(true);
-    expect(map.get("fable")?.installed).toBe(true);
-    expect(map.get("caveman")?.installed).toBe(true);
-    expect(map.get("omni-skill")?.installed).toBe(true);
+      expect(statuses.length).toBe(5);
+      const map = new Map(statuses.map(s => [s.id, s]));
+
+      expect(map.get("ponytail")?.installed).toBe(true);
+      expect(map.get("toon")?.installed).toBe(true);
+      expect(map.get("fable")?.installed).toBe(true);
+      expect(map.get("caveman")?.installed).toBe(true);
+      expect(map.get("omni-skill")?.installed).toBe(true);
+    } finally {
+      fs.rmSync(tempHome, { recursive: true, force: true });
+    }
   });
 
   it("synthesizes phase directives with Ponytail YAGNI and Fable contracts in planning", () => {

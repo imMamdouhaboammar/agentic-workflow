@@ -23,6 +23,9 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Install Bun Dependencies
+        run: bun install
+
       - name: Verify CLI Execution
         run: |
           bun ./bin/cli.js --help

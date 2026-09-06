@@ -4,6 +4,8 @@ Unit tests for OmniSkill integration, dynamic DAG generation, and lifecycle dire
 
 import unittest
 import os
+import shutil
+import tempfile
 from core.integrations.registry import get_default_registry
 from core.integrations.installer import IntegrationInstaller
 from core.integrations.lifecycle_director import LifecycleDirector
@@ -15,8 +17,16 @@ class TestOmniSkillIntegration(unittest.TestCase):
     def setUp(self):
         self.project_dir = os.path.abspath(".")
         self.registry = get_default_registry(self.project_dir)
-        self.installer = IntegrationInstaller(self.project_dir)
+        self.temp_home = tempfile.mkdtemp(prefix="omni_test_home_")
+        omni_dir = os.path.join(self.temp_home, ".gemini", "config", "skills", "omni-skill")
+        os.makedirs(omni_dir, exist_ok=True)
+        with open(os.path.join(omni_dir, "SKILL.md"), "w") as f:
+            f.write("# OmniSkill")
+        self.installer = IntegrationInstaller(self.project_dir, home_dir=self.temp_home)
         self.lifecycle_director = LifecycleDirector(self.project_dir, self.registry)
+
+    def tearDown(self):
+        shutil.rmtree(self.temp_home, ignore_errors=True)
 
     def test_omni_skill_registered_in_registry(self):
         omni = self.registry.get("omni-skill")

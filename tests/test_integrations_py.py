@@ -94,8 +94,21 @@ class TestIntegrationInstaller(unittest.TestCase):
 
     def setUp(self):
         self.project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-        self.installer = IntegrationInstaller(self.project_dir)
         self.registry = get_default_registry(self.project_dir)
+        self.temp_home = tempfile.mkdtemp(prefix="installer_test_home_")
+        skills_dir = os.path.join(self.temp_home, ".gemini", "config", "skills")
+        for item in self.registry.list_all():
+            skill_names = item.install.get("skill_names", [item.id])
+            for sname in skill_names:
+                s_path = os.path.join(skills_dir, sname)
+                os.makedirs(s_path, exist_ok=True)
+                with open(os.path.join(s_path, "SKILL.md"), "w") as f:
+                    f.write(f"# {sname}")
+
+        self.installer = IntegrationInstaller(self.project_dir, home_dir=self.temp_home)
+
+    def tearDown(self):
+        shutil.rmtree(self.temp_home, ignore_errors=True)
 
     def test_detection_across_agent_environments(self):
         """Verify installer accurately identifies installed supportive tools."""
